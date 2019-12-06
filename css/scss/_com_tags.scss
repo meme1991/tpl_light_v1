@@ -1,0 +1,11 @@
+// main:template.scss
+
+.tag-category{
+  select{
+    @extend .form-control-sm;
+  }
+  label{
+    height: 24px;
+    line-height: 18px;
+  }
+}

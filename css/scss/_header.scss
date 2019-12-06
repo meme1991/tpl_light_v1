@@ -1,0 +1,296 @@
+//main: template.scss
+header{
+  width: 100%;
+
+  .header-banner,
+  .header-nav{
+    width: 100%;
+    padding: 10px 0 10px 0;
+  }
+
+  /*******************************
+           NAVBAR BANNER
+  *******************************/
+  .header-top{
+    background-color: #162235;
+    color: $white;
+
+    // per top-nav collapse
+    @include media-breakpoint-down(md){
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      > .container{
+        max-width: 100% !important;
+      }
+    }
+
+    .htop{
+      > div{
+        margin-left: 10px;
+      }
+    }
+
+    // inline menu
+    .inline-menu{
+      ul{
+        li{
+          padding-top: 5px;
+          padding-bottom: 5px;
+          font-size: 16px;
+          @include link-hover($white, $white);
+          &.delimiter{
+            &::after{
+              background-color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    // link in evidenza... es. SERVIZI AI CITTADINI
+    .featured-htop{
+      background-color: $primary;
+      padding-right: 10px !important;
+      padding-left: 10px !important;
+      &::after{
+        display: none;
+      }
+    }
+
+    // social top bar
+    .social-bar{
+      margin-bottom: 0 !important;
+      li{
+        padding: 8px 0;
+        .fa-stack{
+          font-size: 14px;
+        }
+        @include link-hover($white, $white);
+        .fa-inverse{
+          color: #162235;
+        }
+        &:first-child{
+          display: none;
+        }
+      }
+    }
+
+    // search topbar
+    .search{
+      margin: 0 !important;
+      padding-left: 5px;
+      padding-right: 5px;
+      form{
+        input.form-control{
+          background-color: rgba($white, .1);
+          border-color: rgba($white, .1);
+          padding: 0 10px;
+          color: $light;
+          @include transition(all, 0.3s, ease-in-out);
+          &:focus{
+            background-color: rgba($white, .2);
+            @include transition(all, 0.3s, ease-in-out);
+          }
+          &::-webkit-input-placeholder,
+          &::-moz-placeholder,
+          &:-ms-input-placeholder,
+          &:-moz-placeholder{
+            color: $light;
+          }
+        }
+        button{
+          background-color: rgba($white, .1);
+          border: 0;
+          color: $light;
+          border-radius: 0 .25rem .25rem 0;
+        }
+      }
+    }
+
+    // multilingua
+    .mod-languages{
+      .btn-group{
+        padding-top: 11px;
+        button{
+          padding: 0 4px;
+          border: 0;
+          font-size: 16px;
+          background-color: transparent;
+          color: $white;
+        }
+        .btn-secondary:active,
+        .btn-secondary.active,
+        .show>.btn-secondary.dropdown-toggle {
+          color: $white;
+          background-color: transparent;
+          background-image: none;
+          border: 0;
+        }
+        .dropdown-menu{
+          text-align: center;
+          min-width: 50px;
+          padding: 0;
+          margin: 0;
+          font-size: 1rem;
+          color: $dark;
+          background-color: $white;
+          border: 0;
+          border-radius: 0;
+        }
+      }
+      .list-inline{
+        @include link-hover($white, $white);
+        li{
+          position: relative;
+          margin: 0;
+          padding: 10px 0;
+          @include link-hover($white, $white);
+          &.active{
+            font-weight: bold;
+            text-decoration: underline;
+          }
+          &:not(:last-child){
+            padding-right: 8px;
+            &::after{
+              content: '';
+              position: absolute;
+              right: 0;
+              bottom: 50%;
+              margin-bottom: -9px;
+              width: 1px;
+              height: 18px;
+              background-color: $white;
+            }
+          }
+        }
+      }
+    }
+
+  }
+  /*******************************
+           NAVBAR STYLE
+  *******************************/
+  .header-nav{
+    background-color: $primary;
+    padding: 0;
+    @include transition(all, 0.3s, ease-in-out);
+    @include media-breakpoint-down(md){
+      position: fixed;
+      top: 34px;
+      left: 0;
+      z-index: 10;
+      > .container{
+        max-width: 100% !important;
+      }
+      &.fixed-top{
+        transform: translateY(-34px);
+      }
+    }
+
+    .navbar{
+      background-color: $primary;
+      padding: 0;
+
+      @include media-breakpoint-down(md){
+        padding: 5px 0;
+      }
+
+      .navbar-collapse{
+        @include media-breakpoint-down(md){
+          margin-top: 5px;
+          background-color: $white;
+        }
+      }
+
+      .navbar-nav{
+        > .nav-item{
+          @include media-breakpoint-up(lg){
+            &:first-child(){
+              .nav-link{
+                padding-left: 0;
+              }
+            }
+          }
+          @include media-breakpoint-down(md){
+            border-top: 1px $primary solid;
+          }
+          &.show{
+            .nav-link{
+              position: relative;
+              background-color: $white;
+              color: $primary;
+              &.dropdown-toggle::after{
+                -webkit-transform: rotate(180deg);
+                        transform: rotate(180deg);
+                @include transition(all, 0.3s, ease-in-out);
+              }
+              @include media-breakpoint-down(md){
+                background-color: $primary;
+                color: $white;
+                &:hover{
+                  background-color: $primary !important;
+                }
+              }
+            }
+          }
+
+          .nav-link{
+            position: relative;
+            padding: 15px 20px;
+            text-transform: uppercase;
+            color: $white;
+            font-weight: 600;
+            @include media-breakpoint-down(md){
+              color: $primary;
+              &:hover{
+                background-color: rgba($primary, .3);
+              }
+            }
+
+            &.dropdown-toggle::after{
+              width: auto;
+              height: auto;
+              content: "\f078";
+              vertical-align: 0;
+              // font-size: 12px;
+              font-family: 'Font Awesome 5 Pro';
+              font-weight: 900;
+              border-width: 0;
+              -webkit-transform: rotate(0);
+                      transform: rotate(0);
+              @include transition(all, .3s, ease-in-out);
+            }
+          }
+        }
+
+      }
+
+      .dropdown-item{
+        @include media-breakpoint-down(sm){
+          padding: 15px 20px !important;
+          &:hover{
+            background-color: rgba($primary, .3);
+          }
+        }
+      }
+      .navbar-toggler{
+        border-width: 0;
+        margin-left: 15px;
+        > i, .navbar-toggler-text{
+          display: block;
+          color: $white;
+        }
+        > i{
+          font-size: 30px;
+        }
+        .navbar-toggler-text{
+          font-size: 10px;
+        }
+      }
+
+    }
+
+  }
+}

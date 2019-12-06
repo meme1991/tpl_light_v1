@@ -1,0 +1,263 @@
+// main: template.scss
+
+/***************************************
+CARD
+***************************************/
+.card{
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  border-radius: 1px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.15);
+  @include transition(all, .3s, ease-in-out);
+  figure{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .card-block{
+    padding: 30px;
+    .card-header{
+      padding: 0;
+      background-color: transparent;
+      border-bottom: 0;
+      .card-info{
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        .card-category, .card-author, .card-published{
+          color: $gray-500;
+          font-weight: 600;
+          a, a:hover{
+            color: $gray-500;
+            font-weight: 600;
+          }
+        }
+      }
+      .card-title{
+        font-weight: 500;
+      }
+    }
+    .card-text{
+      p{
+        text-align: justify;
+        color: $gray-600;
+        font-size: 16px;
+      }
+    }
+  }
+  .read-more{
+    a, a:hover{
+      padding: 0;
+      color: $primary;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 16px;
+    }
+  }
+
+  &:hover{
+    transform: translateY(-5px);
+    border-bottom: 5px $primary solid;
+    @include transition(all, .1s, ease-in-out);
+  }
+  //
+  //   iframe{
+  //     width: 100% !important;
+  //     margin: 15px 0 !important;
+  //     border: 0 !important;
+  //     border-width: 0 !important;
+  //   }
+  //
+  // }
+  &.card-list{
+    flex-direction: row;
+    figure{
+      height: 100%;
+    }
+    .card-image,.card-block{
+      display: inline-block;
+      float: left;
+    }
+    .card-image{
+      width: 40%;
+      @include media-breakpoint-down(md){
+        display: none;
+      }
+    }
+    .card-block{
+      width: 60%;
+      @include media-breakpoint-down(md){
+        width: 100%;
+      }
+    }
+    .read-more{
+      text-align: right;
+      @include media-breakpoint-down(md){
+        text-align: left;
+      }
+    }
+  }
+
+  &.card-block{
+    // border: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 0;
+    border-top: 10px $light solid;
+    figure.default{
+      width: 100%;
+      height: 250px !important;
+      margin-bottom: 20px;
+      img{
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+      }
+    }
+    .card-text{
+      font-weight: 300;
+    }
+  }
+
+  &.list-default{
+    border: 0;
+    border-top: 2px $light solid;
+    border-radius: 0;
+    .list-h{
+      small{
+        position: relative;
+      }
+      div > div{
+        small{
+          &:not(:last-child){
+            padding-right: 16px;
+            &::after{
+              content: '';
+              position: absolute;
+              right: 6px;
+              bottom: 50%;
+              margin-bottom: -7px;
+              width: 1px;
+              height: 14px;
+              background-color: rgba(0, 0, 0, 0.7);
+            }
+          }
+        }
+      }
+
+    }
+    .list-body{
+      figure.default{
+        @include boh-shadow_default();
+        &::after{
+          display: none !important;
+        }
+        img{
+          max-width: 300px;
+          max-height: 200px;
+        }
+      }
+    }
+  }
+}
+
+// .card-lead{
+//   background-color: $light;
+//   height: 400px;
+//   border: 0;
+//   border-radius: 0;
+//   .lead-image{
+//     padding-left: 0;
+//     figure{
+//       margin-bottom: 0;
+//       width: 100%;
+//       height: 400px;
+//       &::after{
+//         display: none;
+//       }
+//       img{
+//         object-fit: cover;
+//         width: 100%;
+//         height: 100%;
+//       }
+//     }
+//   }
+//   .lead-text{
+//     padding: 20px 20px 20px 5px;
+//   }
+// }
+
+// image card default
+.card{
+  figure.default{
+    position: relative;
+    figcaption{
+      background-color: $primary;
+      color: $white;
+      opacity: 0;
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      @include transition(all, 0.3s, ease-in-out);
+    }
+    a, figcaption{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &:hover{
+    figure.default > figcaption{
+      opacity: 0.7;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      @include transition(all, 0.3s, ease-in-out);
+    }
+  }
+}
+
+
+/***************************************
+LISTE
+***************************************/
+.list-group{
+  &.list-small{
+    li{
+      border: 0;
+      border-top: 2px $light solid;
+      .list-title{
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .list-header{
+        padding: 0;
+        background-color: transparent;
+        border-bottom: 0;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        .list-category, .list-author, .list-published{
+          color: $gray-500;
+          font-weight: 600;
+          a, a:hover{
+            color: $gray-500;
+            font-weight: 600;
+          }
+        }
+      }
+      .list-text{
+        p{
+          text-align: justify;
+          color: $gray-600;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
