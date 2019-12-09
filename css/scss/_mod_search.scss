@@ -1,0 +1,59 @@
+// main: template.scss
+
+.search-overlay{
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($primary, 0.95);
+  z-index: 99999;
+  @include transition(all, 0.3s, ease-in-out);
+  .container,
+  .row,
+  .col-12{
+    height: 100%;
+  }
+  .close-icon{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: $white;
+    font-size: 35px;
+  }
+  form{
+    width: 100%;
+    .input-group{
+      width: 100%;
+    }
+    input.form-control{
+      // width: 100%;
+      background-color: transparent;
+      border-color: transparent;
+      border-bottom: 2px $white solid;
+      border-radius: 0;
+      color: $white;
+      font-size: 35px;
+      @include transition(all, 0.3s, ease-in-out);
+      // &::-webkit-input-placeholder,
+      // &::-moz-placeholder,
+      // &:-ms-input-placeholder,
+      // &:-moz-placeholder,
+      &::placeholder{
+        color: $white !important;
+      }
+    }
+    button{
+      background-color: transparent;
+      border: 0;
+      color: $white;
+      font-size: 35px;
+    }
+  }
+  &.active{
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
+    //transform: rotate(0);
+    @include transition(all, 0.3s, ease-in-out);
+  }
+}

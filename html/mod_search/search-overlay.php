@@ -28,7 +28,7 @@ $doc->addScriptDeclaration("
 
 ?>
 <div class="search-overlay  <?php echo $moduleclass_sfx; ?>">
-	<a href="#" class="close-icon" title="close"><i class="far fa-times"></i></a>
+	<a href="#" class="close-icon" title="close"><i class="fal fa-times"></i></a>
 	<div class="container">
 		<div class="row">
 			<div class="col-12 d-flex align-items-center justify-content-center">
@@ -36,7 +36,7 @@ $doc->addScriptDeclaration("
 					<label class="sr-only" for="mod-search-searchword<?php echo $module->id ?>">Search</label>
 					<div class="input-group">
 				    <input type="search" name="searchword" class="form-control" id="mod-search-searchword<?php echo $module->id ?>" placeholder="<?php echo $text ?>" aria-describedby="btnGroupAddon">
-						<button type="submit" class="input-group-addon" id="btnGroupAddon" onclick="this.form.searchword.focus();"><i class="far fa-search"></i></button>
+						<button type="submit" class="input-group-addon" id="btnGroupAddon" onclick="this.form.searchword.focus();"><i class="fal fa-search"></i></button>
 				  </div>
 					<input type="hidden" name="task" value="search" />
 					<input type="hidden" name="option" value="com_search" />
