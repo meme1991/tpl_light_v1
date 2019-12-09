@@ -42,7 +42,7 @@ defined('_JEXEC') or die;
 
 				<div class="d-flex">
 					<a href="<?php echo JRoute::_(ContactHelperRoute::getCategoryRoute($item->id, $item->language)); ?>" title="<?php echo $this->escape($item->title); ?>" class="btn btn-primary btn-block icon-go">
-						<?php echo JText::_('TPL_AFFINITY_ACCESS') ?>
+						<?php echo JText::_('TPL_LIGHT_ACCESS') ?>
 					</a>
 				</div>
 

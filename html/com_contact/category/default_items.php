@@ -24,7 +24,7 @@ $listDirn  = $this->escape($this->state->get('list.direction'));
 
 						<div class="card card-block py-3">
 							<?php if ($this->params->get('show_position_headings')) : ?>
-								<small><?php echo JText::sprintf('TPL_AFFINITY_CONTACT_POSITION', $item->con_position); ?></small>
+								<small><?php echo JText::sprintf('TPL_LIGHT_CONTACT_POSITION', $item->con_position); ?></small>
 							<?php endif; ?>
 							<h4 class="card-title">
 								<a href="<?php echo JRoute::_(ContactHelperRoute::getContactRoute($item->slug, $item->catid)); ?>" title="<?php echo $item->name; ?>">
@@ -45,10 +45,10 @@ $listDirn  = $this->escape($this->state->get('list.direction'));
 							<?php if ($this->params->get('show_email_headings') OR $this->params->get('show_telephone_headings')) : ?>
 							  <div class="card-body px-0 pt-0">
 									<?php if ($this->params->get('show_email_headings')) : ?>
-										<p class="mb-0 size-small"><?php echo JText::sprintf('TPL_AFFINITY_CONTACT_EMAIL', $item->email_to); ?></p>
+										<p class="mb-0 size-small"><?php echo JText::sprintf('TPL_LIGHT_CONTACT_EMAIL', $item->email_to); ?></p>
 									<?php endif; ?>
 									<?php if ($this->params->get('show_telephone_headings') && !empty($item->telephone)) : ?>
-										<p class="mb-0 size-small"><?php echo JText::sprintf('TPL_AFFINITY_CONTACT_TELEFONO', $item->telephone); ?></p>
+										<p class="mb-0 size-small"><?php echo JText::sprintf('TPL_LIGHT_CONTACT_TELEFONO', $item->telephone); ?></p>
 									<?php endif; ?>
 							  </div>
 							<?php endif; ?>

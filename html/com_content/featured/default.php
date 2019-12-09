@@ -32,49 +32,11 @@ $doc->addScriptDeclaration("
 			});
 		}
 
-		var swiperPartner = new Swiper('.swiper-container.leaditem', {
-	    slidesPerView: 1,
-			autoplay: {
-        delay: 10000,
-        disableOnInteraction: false,
-      },
-	    // breakpoints: {
-	    //     1024: {
-	    //         slidesPerView: 4,
-	    //         spaceBetween: 40
-	    //     },
-	    //     768: {
-	    //         slidesPerView: 3,
-	    //         spaceBetween: 30
-	    //     },
-	    //     576: {
-	    //         slidesPerView: 1,
-	    //         spaceBetween: 10
-	    //     }
-	    // }
-	  });
-
 	})
 ");
 ?>
 <section class="wrapper featured-view" itemscope itemtype="https://schema.org/Blog">
 	<div class="container">
-		<?php if(count($this->lead_items) > 0): ?>
-			<div class="row mb-3">
-				<div class="col-12">
-					<div class="swiper-container leaditem">
-						<div class="swiper-wrapper">
-							<?php foreach ($this->lead_items as &$item) : ?>
-								<div class="swiper-slide">
-									<?php $this->item = &$item; ?>
-									<?php echo $this->loadTemplate('lead'); ?>
-								</div>
-							<?php endforeach; ?>
-						</div>
-					</div>
-				</div>
-			</div>
-		<?php endif; ?>
 		<?php if ($this->params->get('show_page_heading') != 0) : ?>
 			<div class="row">
 				<div class="col-12">
@@ -85,7 +47,7 @@ $doc->addScriptDeclaration("
 		<div class="row grid mt-3">
 			<?php $col = 12/$this->columns; ?>
 			<div class="grid-sizer col-12 col-sm-12 col-md-6 col-lg-<?php echo $col ?>"></div>
-			<?php $list = array_merge($this->intro_items, $this->link_items); ?>
+			<?php $list = array_merge($this->lead_items, $this->intro_items, $this->link_items); ?>
 			<?php if (!empty($list)) : ?>
 				<?php foreach ($list as $k => &$item) : ?>
 					<div class="grid-item col-12 col-sm-12 col-md-6 col-lg-<?php echo $col ?> mb-3">
@@ -108,7 +70,7 @@ $doc->addScriptDeclaration("
 		<?php else:  ?>
 		<div class="row">
 			<div class="col-12 mt-4 text-center">
-				<p><a href="<?php echo JURI::base(true) ?>/tutte-le-notizie" class="btn btn-primary icon-go"><?php echo JText::_('TPL_AFFINITY_MORE_ARTICLE') ?></a></p>
+				<p><a href="<?php echo JURI::base(true) ?>/tutte-le-notizie" class="btn btn-outline-primary"><?php echo JText::_('TPL_LIGHT_MORE_ARTICLE') ?></a></p>
 			</div>
 		</div>
 		<?php endif; ?>

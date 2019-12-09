@@ -31,7 +31,7 @@ $this->form->setFieldAttribute('contact_message', 'hint', 'Inserisci il tuo mess
 
 <div class="col-12 col-lg-4 mt-3 mt-lg-0 py-3 form-module bg-light">
 	<div class="aside-title">
-		<h4><?php echo JText::_('TPL_AFFINITY_FORM_CONTACT_LABEL') ?></h4>
+		<h4><?php echo JText::_('TPL_LIGHT_FORM_CONTACT_LABEL') ?></h4>
 	</div>
 	<div class="contact-form">
 		<form id="contact-form" action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate form-horizontal well custom-form">
@@ -60,7 +60,7 @@ $this->form->setFieldAttribute('contact_message', 'hint', 'Inserisci il tuo mess
 			</div>
 			<div class="control-group mt-2">
 				<div class="controls">
-					<button class="btn btn-primary btn-block validate" type="submit"><?php echo JText::_('TPL_AFFINITY_FORM_SEND_LABEL'); ?> <i class="fas fa-paper-plane pl-2"></i></button>
+					<button class="btn btn-primary btn-block validate" type="submit"><?php echo JText::_('TPL_LIGHT_FORM_SEND_LABEL'); ?> <i class="fas fa-paper-plane pl-2"></i></button>
 					<input type="hidden" name="option" value="com_contact" />
 					<input type="hidden" name="task" value="contact.submit" />
 					<input type="hidden" name="return" value="<?php echo $this->return_page; ?>" />

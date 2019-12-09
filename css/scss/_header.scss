@@ -115,18 +115,6 @@ header{
     background-color: $primary;
     padding: 0;
     @include transition(all, 0.3s, ease-in-out);
-    // @include media-breakpoint-down(md){
-    //   position: fixed;
-    //   top: 34px;
-    //   left: 0;
-    //   z-index: 10;
-    //   > .container{
-    //     max-width: 100% !important;
-    //   }
-    //   &.fixed-top{
-    //     transform: translateY(-34px);
-    //   }
-    // }
 
     .navbar{
       position: relative;
@@ -134,8 +122,6 @@ header{
       padding: 0;
 
       .navbar-brand{
-        // position: absolute;
-        // top: -20px;
         @extend .d-flex;
         @extend .align-items-center;
         img, .sitename{
@@ -198,9 +184,8 @@ header{
           .nav-link{
             position: relative;
             padding: 15px 20px;
-            text-transform: uppercase;
             color: $white;
-            font-weight: 600;
+            font-weight: 500;
             @include media-breakpoint-down(md){
               color: $primary;
               &:hover{

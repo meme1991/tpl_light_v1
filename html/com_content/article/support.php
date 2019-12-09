@@ -24,7 +24,7 @@ $params  = $this->item->params;
 				<div class="articleBody mt-5">
 					<?php echo $this->item->text; ?>
 					<p class="mt-5 text-center">
-						<a href="<?php echo JURI::base() ?>" class="btn btn-primary" title="<?php echo JText::_('TPL_AFFINITY_BACKTOHOME') ?>"><?php echo JText::_('TPL_AFFINITY_BACKTOHOME') ?></a>
+						<a href="<?php echo JURI::base() ?>" class="btn btn-primary" title="<?php echo JText::_('TPL_LIGHT_BACKTOHOME') ?>"><?php echo JText::_('TPL_LIGHT_BACKTOHOME') ?></a>
 					</p>
 				</div>
 			</div>
