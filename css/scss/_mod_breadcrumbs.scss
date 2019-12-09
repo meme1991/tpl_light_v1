@@ -8,6 +8,8 @@
   border-bottom: 1px $light solid;
   background-color: transparent;
   .breadcrumb{
+    padding-top: 5px;
+    padding-bottom: 5px;
     background-color: transparent;
     @include link-hover($dark, $dark);
     margin-bottom: 0;

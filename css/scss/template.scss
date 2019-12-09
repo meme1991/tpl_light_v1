@@ -94,7 +94,6 @@
 @import "footer.scss";
 @import "message.scss";
 
-
 // componenti
 @import "card.scss";
 
@@ -105,7 +104,6 @@
 @import "com_contact.scss";
 @import "com_users.scss";
 @import "com_search.scss";
-@import "com_finder.scss";
 @import "com_tags.scss";
 @import "com_edocman.scss";
 
@@ -117,7 +115,6 @@
 @import "mod_search-overlay.scss";
 @import "megamenu.scss";
 @import "offcanvas.scss";
-@import "entrypoint.scss";
 @import "mod_acymailing.scss";
 @import "mod_jevents.scss";
 
@@ -125,5 +122,5 @@
 @import "chronoforms.scss";
 
 //plugin
-@import "plg_featuredcontent.scss";
+// @import "plg_featuredcontent.scss";
 @import "jce_content.scss";

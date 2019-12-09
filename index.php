@@ -59,11 +59,11 @@
 					<nav class="navbar navbar-expand-lg navbar-light bg-faded">
 						<a href="<?php echo JURI::base() ?>" class="navbar-brand" title="<?= $sitename ?>">
 							<?php if(isset($logo) AND $logo != '') : ?>
-								<img src="<?php echo $logo ?>" class="rounded img-fluid float-left mr-4" alt="<?php echo $sitename ?>">
+								<img src="<?php echo $logo ?>" alt="<?php echo $sitename ?>">
 							<?php else : ?>
-								<img src="http://logo.pizza/img/tri-arc/tri-arc-connected.svg" width="50" height="50" class="rounded img-fluid float-left mr-4" alt="<?php echo $siteName ?>">
+								<img src="http://logo.pizza/img/tri-arc/tri-arc-connected.svg" width="50" height="50" alt="<?php echo $siteName ?>">
 							<?php endif; ?>
-							<?php echo $sitename ?>
+							<h1 class="sitename"><?php echo $sitename ?></h1>
 						</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#meganav" aria-controls="meganav" aria-expanded="false" aria-label="Toggle navigation">
 							<i class="fal fa-bars"></i>

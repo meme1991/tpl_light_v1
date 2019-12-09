@@ -12,23 +12,12 @@ header{
            NAVBAR BANNER
   *******************************/
   .header-top{
-    background-color: #162235;
+    background-color: $dark;
     color: $white;
-
-    // per top-nav collapse
-    @include media-breakpoint-down(md){
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      > .container{
-        max-width: 100% !important;
-      }
-    }
 
     .htop{
       > div{
-        margin-left: 10px;
+        margin-left: 30px;
       }
     }
 
@@ -56,56 +45,6 @@ header{
       padding-left: 10px !important;
       &::after{
         display: none;
-      }
-    }
-
-    // social top bar
-    .social-bar{
-      margin-bottom: 0 !important;
-      li{
-        padding: 8px 0;
-        .fa-stack{
-          font-size: 14px;
-        }
-        @include link-hover($white, $white);
-        .fa-inverse{
-          color: #162235;
-        }
-        &:first-child{
-          display: none;
-        }
-      }
-    }
-
-    // search topbar
-    .search{
-      margin: 0 !important;
-      padding-left: 5px;
-      padding-right: 5px;
-      form{
-        input.form-control{
-          background-color: rgba($white, .1);
-          border-color: rgba($white, .1);
-          padding: 0 10px;
-          color: $light;
-          @include transition(all, 0.3s, ease-in-out);
-          &:focus{
-            background-color: rgba($white, .2);
-            @include transition(all, 0.3s, ease-in-out);
-          }
-          &::-webkit-input-placeholder,
-          &::-moz-placeholder,
-          &:-ms-input-placeholder,
-          &:-moz-placeholder{
-            color: $light;
-          }
-        }
-        button{
-          background-color: rgba($white, .1);
-          border: 0;
-          color: $light;
-          border-radius: 0 .25rem .25rem 0;
-        }
       }
     }
 
@@ -176,22 +115,42 @@ header{
     background-color: $primary;
     padding: 0;
     @include transition(all, 0.3s, ease-in-out);
-    @include media-breakpoint-down(md){
-      position: fixed;
-      top: 34px;
-      left: 0;
-      z-index: 10;
-      > .container{
-        max-width: 100% !important;
-      }
-      &.fixed-top{
-        transform: translateY(-34px);
-      }
-    }
+    // @include media-breakpoint-down(md){
+    //   position: fixed;
+    //   top: 34px;
+    //   left: 0;
+    //   z-index: 10;
+    //   > .container{
+    //     max-width: 100% !important;
+    //   }
+    //   &.fixed-top{
+    //     transform: translateY(-34px);
+    //   }
+    // }
 
     .navbar{
+      position: relative;
       background-color: $primary;
       padding: 0;
+
+      .navbar-brand{
+        // position: absolute;
+        // top: -20px;
+        @extend .d-flex;
+        @extend .align-items-center;
+        img, .sitename{
+          display: inline-block;
+          margin-bottom: 0;
+        }
+        img{
+          width: 50px;
+          height: 50px;
+          margin-right: 10px;
+        }
+        .sitename{
+          font-size: 25px;
+        }
+      }
 
       @include media-breakpoint-down(md){
         padding: 5px 0;
@@ -207,9 +166,9 @@ header{
       .navbar-nav{
         > .nav-item{
           @include media-breakpoint-up(lg){
-            &:first-child(){
+            &:last-child(){
               .nav-link{
-                padding-left: 0;
+                padding-right: 0;
               }
             }
           }

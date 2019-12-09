@@ -35,16 +35,17 @@ defined('_JEXEC') or die;
 		/* icone */
 		$iconYN = $item->params->get('menu-icon-yn');
 		if($iconYN){
-			$icon = $item->params->get('menu-icon');
-			$pos  = $item->params->get('menu-icon-pos');
+			$icon 		= $item->params->get('menu-icon');
+			$pos  		= $item->params->get('menu-icon-pos');
+			$onlyIcon = $item->params->get('menu-only-icon');
 		}
 
-		/* modal */
-		$modal = $item->params->get('modal');
-		if($modal){
-			$modal_toggle = $item->params->get('option1');
-			$modal_target = $item->params->get('option2');
-		}
+		// /* modal */
+		// $modal = $item->params->get('modal');
+		// if($modal){
+		// 	$modal_toggle = $item->params->get('option1');
+		// 	$modal_target = $item->params->get('option2');
+		// }
 
 		// delimiter
 		$delimiter = $item->params->get('delimiter');

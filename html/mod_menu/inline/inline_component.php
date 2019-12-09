@@ -40,9 +40,12 @@ if ($accesskey)
 
 // costruisco il titolo del links se ci sono delle icone
 $title = $item->title;
-if($iconYN AND $pos == 1)
-	$title = '<i class="'.$icon.' mr-1"></i>'.$item->title;
-elseif($iconYN AND $pos == 0)
-	$title = $item->title.'<i class="'.$icon.' ml-1"></i>';
+if($iconYN AND $onlyIcon == 0)
+	$title = '<i class="'.$icon.' mr-1"></i>';
+elseif($iconYN AND $onlyIcon == 1)
+	if($iconYN AND $pos == 1)
+		$title = '<i class="'.$icon.' mr-1"></i>'.$item->title;
+	elseif($iconYN AND $pos == 0)
+		$title = $item->title.'<i class="'.$icon.' ml-1"></i>';
 ?>
 <?php echo JHtml::_('link', JFilterOutput::ampReplace(htmlspecialchars($flink, ENT_COMPAT, 'UTF-8', false)), $title, $attributes); ?>
