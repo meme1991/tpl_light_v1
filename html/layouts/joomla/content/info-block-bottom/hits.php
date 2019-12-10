@@ -10,7 +10,7 @@
 defined('JPATH_BASE') or die;
 
 ?>
-<small>
+<small class="hits">
 	<span class="sr-only"><?php echo JText::_('COM_CONTENT_ARTICLE_HITS') ?></span>
 	<meta itemprop="interactionCount" content="UserPageVisits:<?php echo $displayData['item']->hits; ?>" />
 	<?php echo JText::sprintf('COM_CONTENT_ARTICLE_HITS', $displayData['item']->hits); ?>

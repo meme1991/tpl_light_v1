@@ -14,9 +14,6 @@ JLoader::register('TagsHelperRoute', JPATH_BASE . '/components/com_tags/helpers/
 $authorised = JFactory::getUser()->getAuthorisedViewLevels();
 ?>
 <?php if (!empty($displayData)) : ?>
-	<!-- <div class="tags-list">
-		<h4><?php echo JText::_('TPL_AFFINITY_TAG_LABEL') ?></h4>
-	</div> -->
 	<ul class="tags list-inline mt-4">
 		<?php foreach ($displayData as $i => $tag) : ?>
 			<?php if (in_array($tag->access, $authorised)) : ?>

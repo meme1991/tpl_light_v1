@@ -9,7 +9,7 @@
 
 defined('JPATH_BASE') or die;
 ?>
-<small class="d-none d-md-block" data-toggle="tooltip" data-placement="top" title="<?php echo JText::_('TPL_AFFINITY_CREATED_DATE') ?>" itemprop="datePublished" content="<?php echo JHtml::_('date', $displayData['item']->created, JText::_('Y-m-d')) ?>">
+<small class="created-date d-none d-md-block" data-toggle="tooltip" data-placement="top" title="<?php echo JText::_('TPL_AFFINITY_CREATED_DATE') ?>" itemprop="datePublished" content="<?php echo JHtml::_('date', $displayData['item']->created, JText::_('Y-m-d')) ?>">
 	<span class="sr-only"><?php echo JText::_('TPL_AFFINITY_CREATED_DATE') ?></span>
 	<?php echo JHtml::_('date', $displayData['item']->created, JText::_('DATE_FORMAT_LC1')); ?>
 </small>

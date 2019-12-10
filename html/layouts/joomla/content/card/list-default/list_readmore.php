@@ -16,7 +16,7 @@ $link   = JRoute::_(ContentHelperRoute::getArticleRoute($displayData->slug, $dis
 <div class="read-more">
   <?php if($params->get('show_readmore')) : ?>
     <a href="<?php echo $link ?>" class="btn btn-link btn-sm" title="<?php echo $this->escape($displayData->title) ?>" itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="<?php echo $link ?>">
-      <?php echo JText::_('TPL_AFFINITY_READ_MORE') ?>
+      <?php echo JText::_('TPL_LIGHT_READ_MORE') ?>
     </a>
   <?php endif; ?>
 </div>

@@ -14,6 +14,6 @@ $link   = JRoute::_(ContentHelperRoute::getArticleRoute($displayData->slug, $dis
 ?>
 <?php if($params->get('show_readmore')) : ?>
   <a href="<?php echo $link ?>" class="btn btn-primary btn-block icon-go" title="<?php echo $this->escape($displayData->title) ?>">
-    <?php echo JText::_('TPL_AFFINITY_ACCESS') ?>
+    <?php echo JText::_('TPL_LIGHT_ACCESS') ?>
   </a>
 <?php endif; ?>
