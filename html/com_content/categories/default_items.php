@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
 	<?php foreach ($this->items[$this->parent->id] as $id => $item) : ?>
 		<?php if ($this->params->get('show_empty_categories_cat') || $item->numitems || count($item->getChildren())) : ?>
 			<div class="col-12 col-sm-12 col-md-6 col-lg-4">
-				<?php echo JLayoutHelper::render('joomla.content.categories.card-block',  array('item' => $item, 'params' => $this->params)); ?>
+				<?php echo JLayoutHelper::render('joomla.content.categories.card-secondary',  array('item' => $item, 'params' => $this->params)); ?>
 			</div>
 
 			<?php // EVENTUALI LIVELLI DI SOTTOCATEGORIE ?>

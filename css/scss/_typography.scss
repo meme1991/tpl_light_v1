@@ -229,7 +229,7 @@ h6{
 }
 
 .aside-title{
-  border-bottom: $sepLine_hieght $light solid;
+  border-bottom: 2px $light solid;
   margin-bottom: 8px;
   h4{
     position: relative;
@@ -239,10 +239,10 @@ h6{
     &::after{
       content: '';
       position: absolute;
-      bottom: -$sepLine_hieght;
+      bottom: -2px;
       left: 0;
       width: 100px;
-      height: $sepLine_hieght;
+      height: 2px;
       background-color: $primary;
     }
   }

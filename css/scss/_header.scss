@@ -14,6 +14,11 @@ header{
   .header-top{
     background-color: $dark;
     color: $white;
+    @include media-breakpoint-down(md){
+      > .container{
+        max-width: 100% !important;
+      }
+    }
 
     .htop{
       > div{
@@ -115,6 +120,11 @@ header{
     background-color: $primary;
     padding: 0;
     @include transition(all, 0.3s, ease-in-out);
+    @include media-breakpoint-down(md){
+      > .container{
+        max-width: 100% !important;
+      }
+    }
 
     .navbar{
       position: relative;

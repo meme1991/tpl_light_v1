@@ -82,7 +82,6 @@
 /*************************
         TEMPLATE
 ************************/
-@import "variables.scss";
 @import "mixin.scss";
 @import "typography.scss";
 
@@ -114,7 +113,7 @@
 @import "mod_tags.scss";
 @import "mod_search.scss";
 @import "megamenu.scss";
-@import "offcanvas.scss";
+// @import "offcanvas.scss";
 @import "mod_acymailing.scss";
 @import "mod_jevents.scss";
 

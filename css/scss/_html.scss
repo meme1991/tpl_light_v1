@@ -167,15 +167,25 @@ o negli articoli
 *********************************/
 figure{
   &.cover-image{
+    position: relative;
     width: 100%;
     height: 300px;
     margin-top: -31px;
     margin-bottom: 20px;
+    @include media-breakpoint-down(md){
+      padding-top: 56.25%; // 16:9
+      height: 0;
+    }
     img{
       width: 100%;
       height: 100%;
       -o-object-fit: cover;
          object-fit: cover;
+       @include media-breakpoint-down(md){
+         position: absolute !important;
+         top: 0;
+         left: 0;
+       }
     }
   }
 }
@@ -246,28 +256,28 @@ table{
           LINE SEPARATOR
 *********************************/
 .sep-line{
-  border-bottom: $sepLine_hieght $light solid;
+  border-bottom: 2px $light solid;
   position: relative;
   &::before{
     position: absolute;
     content: '';
-    bottom: -$sepLine_hieght;
+    bottom: -2px;
     left: 0;
-    height: $sepLine_hieght;
+    height: 2px;
     width: 100px;
     background-color: $primary;
   }
 }
 
 .sep-line-top{
-  border-top: $sepLine_hieght $light solid;
+  border-top: 2px $light solid;
   position: relative;
   &::before{
     position: absolute;
     content: '';
-    top: -$sepLine_hieght;
+    top: -2px;
     left: 0;
-    height: $sepLine_hieght;
+    height: 2px;
     width: 100px;
     background-color: $primary;
   }

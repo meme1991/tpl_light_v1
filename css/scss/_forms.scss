@@ -62,7 +62,7 @@ select {
     width: 16px;
     -webkit-transition: all 0.15s ease-out 0s;
     transition: all 0.15s ease-out 0s;
-    background: $input_cr_default_bgcolor;
+    background: #cbd1d8;
     border: none;
     color: $white;
     cursor: pointer;
@@ -76,7 +76,7 @@ select {
   input[type=radio],
   input[type=checkbox]{
     &:hover {
-      background: $input_cr_bgcolor_hover;
+      background: #9faab7;
     }
     &:checked {
       background: $primary;
