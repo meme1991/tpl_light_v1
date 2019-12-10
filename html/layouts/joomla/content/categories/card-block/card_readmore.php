@@ -12,6 +12,8 @@ defined('JPATH_BASE') or die;
 $item   = $displayData['item'];
 $link   = JRoute::_(ContentHelperRoute::getCategoryRoute($item->id, $item->language));
 ?>
-<a href="<?php echo $link ?>" class="btn btn-primary btn-block icon-go" title="<?php echo $this->escape($item->title) ?>">
-  <?php echo JText::_('TPL_LIGHT_ACCESS') ?>
-</a>
+<div class="">
+  <a href="<?php echo $link ?>" class="btn btn-outline-primary btn-block" title="<?php echo $this->escape($item->title) ?>">
+    <?php echo JText::_('TPL_LIGHT_ACCESS') ?>
+  </a>
+</div>

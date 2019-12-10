@@ -13,8 +13,13 @@ CARD
   figure{
     position: relative;
     width: 100%;
-    height: 250px;
+    padding-top: 56.25%; // 16:9
+    height: 0;
+    // height: 250px;
     img{
+      position: absolute;
+      top: 0;
+      left: 0;
       object-fit: cover;
       width: 100%;
       height: 100%;
@@ -104,24 +109,28 @@ CARD
   }
 
   &.card-block{
-    // border: 0;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
     border-radius: 0;
     border-top: 10px $light solid;
-    figure.default{
+    figure{
+      position: relative;
       width: 100%;
-      height: 250px !important;
-      margin-bottom: 20px;
+      padding-top: 56.25%; // 16:9
+      height: 0;
       img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
         width: 100%;
         height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
       }
     }
     .card-text{
+      color: $gray-600;
       font-weight: 300;
+      font-size: 16px;
     }
   }
 

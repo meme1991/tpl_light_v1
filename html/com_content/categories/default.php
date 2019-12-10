@@ -13,15 +13,11 @@ defined('_JEXEC') or die;
 
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 ?>
-<section class="wrapper categories-list block-view <?php echo $this->pageclass_sfx; ?>">
+<section class="wrapper categories-list <?php echo $this->pageclass_sfx; ?>">
 	<div class="container">
 		<?php echo JLayoutHelper::render('joomla.content.categories_default', $this); ?>
 		<div class="row grid mt-3">
-			<?php if($this->params->get('layout') == 2) : ?>
-				<?php echo $this->loadTemplate('list'); ?>
-			<?php else: ?>
-				<?php echo $this->loadTemplate('items'); ?>
-			<?php endif; ?>
+			<?php echo $this->loadTemplate('items'); ?>
 		</div>
 	</div>
 </section>

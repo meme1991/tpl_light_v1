@@ -12,7 +12,9 @@ defined('JPATH_BASE') or die;
 ?>
 <?php if ($displayData->params->get('show_page_heading')) : ?>
 	<div class="row">
-		<?php echo JLayoutHelper::render('joomla.content.title.title_page', $displayData->escape($displayData->params->get('page_heading'))); ?>
+		<div class="col-12">
+			<?php echo JLayoutHelper::render('joomla.content.title.title_page', $displayData->escape($displayData->params->get('page_heading'))); ?>
+		</div>
 	</div>
 <?php endif; ?>
 
