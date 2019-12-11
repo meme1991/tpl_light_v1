@@ -79,7 +79,7 @@ if (count($categories))
 			$j++;
 			?>
 			<div class="col-12 edocman-category<?php echo $spanClass; ?>">
-				<div class="card card-block py-3">
+				<div class="card card-secondary py-3">
 					<h4 class="card-title">
 			      <a href="<?php echo JRoute::_(EDocmanHelperRoute::getCategoryRoute($category->id, $Itemid)); ?>" title="<?php echo $category->title ?>">
 			        <?php echo $category->title ?>
@@ -93,8 +93,8 @@ if (count($categories))
 					    <p class="card-text"><?php echo JHtml::_('string.truncate', strip_tags($category->description), 200) ?></p>
 					  </div>
 					<?php endif; ?>
-					<a href="<?php echo JRoute::_(EDocmanHelperRoute::getCategoryRoute($category->id, $Itemid)); ?>" class="btn btn-primary btn-block icon-go" title="<?php echo $category->title ?>">
-				    <?php echo JText::_('TPL_AFFINITY_ACCESS') ?>
+					<a href="<?php echo JRoute::_(EDocmanHelperRoute::getCategoryRoute($category->id, $Itemid)); ?>" class="btn btn-primary btn-block" title="<?php echo $category->title ?>">
+				    <?php echo JText::_('TPL_LIGHT_ACCESS') ?>
 				  </a>
 				</div>
 			</div>

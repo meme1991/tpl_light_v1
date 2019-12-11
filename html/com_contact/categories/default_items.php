@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
 <?php if ($this->maxLevelcat != 0 && count($this->items[$this->parent->id]) > 0) : ?>
 	<?php foreach ($this->items[$this->parent->id] as $id => $item) : ?>
 		<div class="grid-item col-12 col-sm-6 col-md-6 col-lg-4">
-			<div class="card card-block py-3">
+			<div class="card card-secondary py-3">
 
 				<h4 class="card-title">
 					<a href="<?php echo JRoute::_(ContactHelperRoute::getCategoryRoute($item->id, $item->language)) ?>" title="<?php echo $this->escape($item->title); ?>">
@@ -33,15 +33,15 @@ defined('_JEXEC') or die;
 				<?php endif; ?>
 
 				<?php if ($this->params->get('show_subcat_desc_cat') == 1 AND $item->description) : ?>
-				  <div class="card-body px-0 pt-0">
+				  <div class="card-body">
 						<?php if ($item->description) : ?>
 							<p class="mb-0"><?php echo JHtml::_('string.truncate', strip_tags($item->description), 200) ?></p>
 						<?php endif; ?>
 				  </div>
 				<?php endif; ?>
 
-				<div class="d-flex">
-					<a href="<?php echo JRoute::_(ContactHelperRoute::getCategoryRoute($item->id, $item->language)); ?>" title="<?php echo $this->escape($item->title); ?>" class="btn btn-primary btn-block icon-go">
+				<div class="read-more">
+					<a href="<?php echo JRoute::_(ContactHelperRoute::getCategoryRoute($item->id, $item->language)); ?>" title="<?php echo $this->escape($item->title); ?>" class="btn btn-primary btn-block">
 						<?php echo JText::_('TPL_LIGHT_ACCESS') ?>
 					</a>
 				</div>

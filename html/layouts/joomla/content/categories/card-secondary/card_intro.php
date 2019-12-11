@@ -14,7 +14,7 @@ $params = $displayData['params'];
 ?>
 <?php if ($params->get('show_subcat_desc_cat') == 1) : ?>
   <?php if ($item->description) : ?>
-    <div class="card-body px-0 pt-0">
+    <div class="card-body">
       <p class="card-text"><?php echo JHtml::_('string.truncate', strip_tags($item->description), 200) ?></p>
     </div>
   <?php endif; ?>

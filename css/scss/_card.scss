@@ -58,7 +58,7 @@ CARD
     }
   }
   .read-more{
-    a, a:hover{
+    a.btn-link, a.btn-link:hover{
       padding: 0;
       color: $primary;
       text-transform: uppercase;
@@ -106,8 +106,9 @@ CARD
   }
 
   &.card-secondary{
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 15px;
+    // padding-right: 15px;
+    // padding-left: 15px;
     border-radius: 0;
     border-top: 10px $light solid;
     figure{
@@ -124,6 +125,11 @@ CARD
         width: 100%;
         height: 100%;
       }
+    }
+    .card-body{
+      padding-right: 0;
+      padding-left: 0;
+      padding-top: 0;
     }
     .card-text{
       color: $gray-600;

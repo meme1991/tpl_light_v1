@@ -22,7 +22,7 @@ $listDirn  = $this->escape($this->state->get('list.direction'));
 				<?php if (in_array($item->access, $this->user->getAuthorisedViewLevels())) : ?>
 					<div class="grid-item col-12 col-sm-6 col-md-6 col-lg-4">
 
-						<div class="card card-block py-3">
+						<div class="card card-secondary">
 							<?php if ($this->params->get('show_position_headings')) : ?>
 								<small><?php echo JText::sprintf('TPL_LIGHT_CONTACT_POSITION', $item->con_position); ?></small>
 							<?php endif; ?>
@@ -43,7 +43,7 @@ $listDirn  = $this->escape($this->state->get('list.direction'));
 							<?php endif; ?>
 
 							<?php if ($this->params->get('show_email_headings') OR $this->params->get('show_telephone_headings')) : ?>
-							  <div class="card-body px-0 pt-0">
+							  <div class="card-body">
 									<?php if ($this->params->get('show_email_headings')) : ?>
 										<p class="mb-0 size-small"><?php echo JText::sprintf('TPL_LIGHT_CONTACT_EMAIL', $item->email_to); ?></p>
 									<?php endif; ?>
@@ -52,8 +52,8 @@ $listDirn  = $this->escape($this->state->get('list.direction'));
 									<?php endif; ?>
 							  </div>
 							<?php endif; ?>
-							<div class="read-more text-center">
-						    <a href="<?php echo JRoute::_(ContactHelperRoute::getContactRoute($item->slug, $item->catid)); ?>" class="btn btn-link btn-sm" title="<?php echo $item->name ?>">
+							<div class="read-more">
+						    <a href="<?php echo JRoute::_(ContactHelperRoute::getContactRoute($item->slug, $item->catid)); ?>" class="btn btn-primary btn-sm btn-block" title="<?php echo $item->name ?>">
 						      <?php echo JText::_('CONTATTA') ?>
 						    </a>
 							</div>
