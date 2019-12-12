@@ -4,7 +4,7 @@
 // @Date:   30-07-2019
 // @Email:  sviluppo@spedi.it
 // @Last modified by:   SPEDI srl
-// @Last modified time: 30-07-2019
+// @Last modified time: 12-12-2019
 // @License: GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
 // @Copyright: Copyright (C) SPEDI srl
 
@@ -34,4 +34,24 @@
 
 .edocman-page-heading{
   font-weight: 300;
+}
+
+.edocmanxtdlink{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 5px 15px;
+  background-color: $light;
+  text-decoration: none;
+  color: $primary;
+  &::before{
+    position: relative;
+    content: '\f0ed';
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 900;
+    margin-right: 5px;
+  }
+  &:hover{
+    text-decoration: none;
+  }
 }
