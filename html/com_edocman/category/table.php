@@ -12,7 +12,7 @@ defined( '_JEXEC' ) or die ;
 $user = JFactory::getUser();
 ?>
 <section class="wrapper">
-	<div class="container">
+	<div class="container" id="edocman-category">
 		<div class="row">
 			<div class="col-12">
 
@@ -26,19 +26,8 @@ $user = JFactory::getUser();
 								{
 									$imgUrl = JUri::base().'media/com_edocman/category/thumbs/'.$this->category->image;
 								}
-								else
-								{
-									//if (!isset($this->config->show_default_category_thumbnail) || $this->config->show_default_category_thumbnail)
-									//{
-										//$imgUrl = JUri::base().'components/com_edocman/assets/images/icons/32x32/folder.png' ;
-									//}
-									//else
-									//{
-										//$imgUrl = '';
-									//}
-								}
 							?>
-								<div id="edocman-category">
+								<div>
 									<h1 class="edocman-page-heading">
 									<?php
 										if($imgUrl == ''){

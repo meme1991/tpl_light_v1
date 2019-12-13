@@ -72,6 +72,35 @@
  					label="TPL_LIGHT_SUBTITLE"
  					description="TPL_LIGHT_SUBTITLE_DESC"
  				 />
+
+				 <!-- <field
+ 					name="address"
+ 					type="text"
+ 					label="TPL_LIGHT_ADDRESS"
+ 					description="TPL_LIGHT_ADDRESS_DESC"
+ 				 />
+
+				 <field
+ 					name="phone"
+ 					type="text"
+ 					label="TPL_LIGHT_PHONE"
+ 					description="TPL_LIGHT_PHONE_DESC"
+ 				 />
+
+				 <field
+ 					name="mail"
+ 					type="text"
+ 					label="TPL_LIGHT_MAIL"
+ 					description="TPL_LIGHT_MAIL_DESC"
+ 				 />
+
+				 <field
+ 					name="piva"
+ 					type="text"
+ 					label="TPL_LIGHT_PIVA"
+ 					description="TPL_LIGHT_PIVA_DESC"
+ 				 /> -->
+
 			</fieldset>
 
 			<fieldset name="plugin" label="Plugins">

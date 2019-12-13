@@ -71,16 +71,7 @@ else
                     <?php echo JText::_('EDOCMAN_CATEGORY'); ?>
                 </th>
                 <?php
-			}
-            if($config->show_tablelayoutdescription)
-            {
-                ?>
-                <th class="edocman-document-desc-col">
-                    <?php echo JText::_('EDOCMAN_DESCRIPTION'); ?>
-                </th>
-                <?php
-            }
-            ?>
+			} ?>
 			<th class="edocman-table-download-col alignright">
 				<?php echo JText::_('EDOCMAN_DOWNLOAD'); ?>
 			</th>
@@ -234,13 +225,13 @@ else
 						if (!empty($item->new_indicator))
 						{
 						?>
-							<span class="edocman_new">
+							<span class="edocman_new badge badge-danger">
 									<?php echo JText::_('EDOCMAN_NEW');?>
 							</span>
 						<?php
 						}elseif(!empty($item->update_indicator)){
 							?>
-							<span class="edocman_updated">
+							<span class="edocman_updated badge badge-success">
 									<?php echo JText::_('EDOCMAN_UPDATED');?>
 							</span>
 							<?php
@@ -248,7 +239,7 @@ else
 						if(in_array('featured', $indicators))
 						{
 						?>
-							<span class="edocman_featured">
+							<span class="edocman_featured badge badge-info">
 									<?php echo JText::_('EDOCMAN_FEATURED');?>
 							</span>
 						<?php
@@ -256,7 +247,7 @@ else
 						if(in_array('hot', $indicators))
 						{
 						?>
-							<span  class="edocman_hot">
+							<span  class="edocman_hot badge badge-warning">
 								<?php echo JText::_('EDOCMAN_HOT');?>
 							</span>
 						<?php
@@ -312,7 +303,7 @@ else
                 }
 				$pass_lock = true;
 				if($config->lock_function) //lock function is turned on
-				{	
+				{
 					if(($item->locked_by != $user->id) && ($item->is_locked == 1))
 					{
 						$pass_lock = false;
@@ -323,7 +314,7 @@ else
 					$url = JRoute::_('index.php?option=com_edocman&task=document.edit&id='.$item->id.'&Itemid='.$Itemid) ;
 					?>
 						<a class="documents_table_edit" href="<?php echo $url; ?>" title="<?php echo JText::_('EDOCMAN_EDIT'); ?>">
-							<i class="edocman-icon-pencil"></i>  
+							<i class="edocman-icon-pencil"></i>
 						</a>
 					<?php
 				}
@@ -337,7 +328,40 @@ else
 				}
 				?>
                 <div class="clearfix"></div>
-                <?php
+<?php if($config->show_tablelayoutdescription): ?>
+<div class="document-short-desc">
+	<?php
+	if (!$item->short_description)
+	{
+			$item->short_description = $item->description;
+	}
+	$description = $item->short_description;
+	$description = strip_tags($description);
+	if ((int)$config->number_words > 0)
+	{
+			$descriptionArr = explode(" ", $description);
+			if (count($descriptionArr) > (int)$config->number_words)
+			{
+					for ($d = 0; $d < (int)$config->number_words - 1; $d++)
+					{
+							echo $descriptionArr[$d] . " ";
+					}
+					echo "..";
+			}
+			else
+			{
+					echo $description;
+			}
+	}
+	else
+	{
+			echo $description;
+	}
+	?>
+</div>
+<?php endif; ?>
+
+								<?php
 				if(($config->show_number_downloaded) && ($item->downloads > 0))
 				{
 					?>
@@ -381,43 +405,19 @@ else
 				</td>
 			<?php
 			}
-            if($config->show_tablelayoutdescription)
-            {
-                ?>
-                <td class="edocman-document-desc-col">
-                    <?php
-                    if (!$item->short_description)
-                    {
-                        $item->short_description = $item->description;
-                    }
-                    $description = $item->short_description;
-                    $description = strip_tags($description);
-                    if ((int)$config->number_words > 0)
-                    {
-                        $descriptionArr = explode(" ", $description);
-                        if (count($descriptionArr) > (int)$config->number_words)
-                        {
-                            for ($d = 0; $d < (int)$config->number_words - 1; $d++)
-                            {
-                                echo $descriptionArr[$d] . " ";
-                            }
-                            echo "..";
-                        }
-                        else
-                        {
-                            echo $description;
-                        }
-                    }
-                    else
-                    {
-                        echo $description;
-                    }
-                    ?>
-                </td>
-            <?php
-            }
-            ?>
-			<td class="center edocman-table-download-col" style="text-align:right;" data-label="">
+			?>
+			<td class="edocman-table-download-col" data-label="">
+			<?php
+				if ($config->hide_details_button !== '1')
+				{
+				?>
+					<a href="<?php echo $url; ?>" class="btn btn-outline-secondary">
+						<?php echo JText::_('EDOCMAN_DETAILS'); ?>
+					</a>
+				<?php
+				}
+			?>
+
 			<?php
 				if($item->document_url != ""){
 					if($config->external_download_link == 1){
@@ -471,8 +471,8 @@ else
 					else
 					{
 					?>
-						<a href="<?php echo $downloadUrl; ?>" class="edocman-download-link" target="<?php echo $target;?>">
-							<span class="edocman_download_label">
+						<a href="<?php echo $downloadUrl; ?>" class="download-link btn btn-outline-primary" target="<?php echo $target;?>">
+							<span class="download_label">
 								<?php
 								if($item->document_url != "")
 								{
@@ -501,7 +501,7 @@ else
 								(
 									<?php echo implode(", ",$tempArr);?>
 								)
-								<?php 
+								<?php
 								}
 								else
 								{

@@ -2,9 +2,11 @@
 
 .mod_login{
   .btn-link{
+    position: relative;
     color: $white;
     margin: 0;
     padding: 0;
     border: 0;
+    top: -2px;
   }
 }

@@ -4,7 +4,7 @@
 // @Date:   30-07-2019
 // @Email:  sviluppo@spedi.it
 // @Last modified by:   SPEDI srl
-// @Last modified time: 12-12-2019
+// @Last modified time: 13-12-2019
 // @License: GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
 // @Copyright: Copyright (C) SPEDI srl
 
@@ -15,20 +15,59 @@
   }
 }
 
+// lista categorie
+#edocman-categories-page{
+
+}
+
+// pagina categoria
 #edocman-category{
+  padding: 0;
   .edocman-page-heading{
     font-weight: 300;
+    font-size: 25px;
   }
   .edocman-description{
-    font-weight: 300;
+    p{
+      color: $gray-600;
+      font-weight: 300;
+      font-size: 16px;
+    }
   }
   .edocman-thumb-left{
     margin-right: 20px;
   }
+  .table-condensed.table-document{
+    border: 0;
+    td{
+      border: 0;
+      border-top: 2px $light solid;
+      &.edocman-document-title-td{
+        > a{
+          text-transform: uppercase;
+          &:hover{
+            color: $primary;
+          }
+        }
+        .document-short-desc{
+          font-size: 16px;
+          color: $gray-600;
+        }
+      }
+      &.edocman-table-download-col{
+        text-align: right;
+      }
+    }
+  }
+
 }
-#edocman-category-page-table{
-  .page-heading{
-    text-transform: uppercase;
+
+
+// pagina documento
+#edocman-document-page{
+  .edocman-box-heading{
+    background-color: transparent;
+    border: 0;
   }
 }
 

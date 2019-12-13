@@ -88,12 +88,21 @@ if (count($categories))
 							<?php endif; ?>
 			      </a>
 				  </h4>
+					<?php if ($category->image && JFile::exists(JPATH_ROOT.'/media/com_edocman/category/thumbs/'.$category->image)): ?>
+						<figure class="default">
+					    <img src="<?= $imgUrl ?>" class="img-fluid" alt="<?= $category->title ?>" />
+					    <figcaption class="d-flex justify-content-center align-items-center">
+					      <i class="far fa-external-link fa-3x" aria-hidden="true"></i>
+					    </figcaption>
+					    <a href="<?php echo JRoute::_(EDocmanHelperRoute::getCategoryRoute($category->id, $Itemid)); ?>" title="<?= $category->title ?>"></a>
+					  </figure>
+					<?php endif; ?>
 					<?php if($category->description): ?>
-						<div class="card-body px-0 pt-0">
+						<div class="card-body">
 					    <p class="card-text"><?php echo JHtml::_('string.truncate', strip_tags($category->description), 200) ?></p>
 					  </div>
 					<?php endif; ?>
-					<a href="<?php echo JRoute::_(EDocmanHelperRoute::getCategoryRoute($category->id, $Itemid)); ?>" class="btn btn-primary btn-block" title="<?php echo $category->title ?>">
+					<a href="<?php echo JRoute::_(EDocmanHelperRoute::getCategoryRoute($category->id, $Itemid)); ?>" class="btn btn-outline-primary btn-block" title="<?php echo $category->title ?>">
 				    <?php echo JText::_('TPL_LIGHT_ACCESS') ?>
 				  </a>
 				</div>

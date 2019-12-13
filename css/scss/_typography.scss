@@ -336,15 +336,15 @@ button{
 .btn-primary{
   text-transform: uppercase;
   // text-decoration: none;
-  @extend .btn-shadow;
+  // @extend .btn-shadow;
 }
 .btn-secondary{
   text-transform: uppercase;
   // text-decoration: none;
-  @extend .btn-shadow;
+  // @extend .btn-shadow;
 }
 
-.btn-outline-primary{
+.btn-outline-primary, .btn-outline-secondary{
   border-width: 2px;
 }
 // .btn-outline-featured{

@@ -114,7 +114,7 @@ else
 			if(($config->accept_license) && ($item->license_id > 0 || EdocmanHelper::getDefaultLicense() > 0)){
 				$accept_license = 1;
 			}
-			
+
 			$hide_download_button = $config->hide_download_button;
 			$hide_download = $category->hide_download;
 			if((int)$hide_download == 1){
@@ -153,7 +153,7 @@ else
 				<div class="edocman-box-heading clearfix">
 					<h3 class="edocman-document-title pull-left">
 						<?php
-							//check 3 options below: 
+							//check 3 options below:
 							//1. Use Download Link instead of Details link
 							//2. Check Download permission
 							//3. In case user should Accept License before they can download, all link must be go to document details
@@ -162,7 +162,7 @@ else
 								if ($showDownloadForm)
 								{
 								?>
-									<a data-toggle="modal" data-document-title="<?php echo $item->title; ?>" title="<?php echo JText::_('EDOCMAN_DOWNLOAD'); ?>"  id="<?php echo $item->id; ?>" class="email-popup edocman-document-title-link" href="#form-content" target="<?php echo $target;?>"> 
+									<a data-toggle="modal" data-document-title="<?php echo $item->title; ?>" title="<?php echo JText::_('EDOCMAN_DOWNLOAD'); ?>"  id="<?php echo $item->id; ?>" class="email-popup edocman-document-title-link" href="#form-content" target="<?php echo $target;?>">
 										<?php
 										if($config->show_icon_beside_title){
 											echo '<i class="'.$item->data->fileicon.'"></i>';

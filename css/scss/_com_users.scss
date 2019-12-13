@@ -1,12 +1,6 @@
 // main:template.scss
 
 .com_users{
-  .page-title{
-    padding: 0;
-    // h1{
-    //   font-weight: 600;
-    // }
-  }
   // &.registration, &.edit, &.profile{
     .spacer label{
       font-weight: 300 !important;
@@ -23,8 +17,8 @@
       margin-bottom: 20px;
     }
     legend{
-      // background-color: $primary;
-      background: linear-gradient( 135deg, $primary 10%, $secondary 100%);
+      background-color: $primary;
+      // background: linear-gradient( 135deg, $primary 10%, $secondary 100%);
       color: $white;
       padding: 5px;
       font-weight: 300;
@@ -81,12 +75,6 @@
 }
 
 .com_privacy{
-  .page-title{
-    padding: 0;
-    // h1{
-    //   font-weight: 600;
-    // }
-  }
   .control-group{
     margin-bottom: 10px;
   }

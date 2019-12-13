@@ -26,7 +26,7 @@ function modChrome_sidebar($module, &$params, &$attribs) {
 // footer wrapper module
 function modChrome_footer($module, &$params, &$attribs) {
 	if ($module->content){
-		echo '<div class="col-12 col-sm-12 col-md-6 col-lg-'.$params->get('bootstrap_size').' mt-5">';
+		echo '<div class="col-12 col-sm-12 col-md-6 col-lg-'.$params->get('bootstrap_size').'">';
 			if ($module->showtitle){
 				echo '<div class="footer-title"><h5>'.$module->title.'</h5></div>';
 			}

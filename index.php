@@ -112,19 +112,8 @@
 	  <?php endif; ?>
 	  <!-- posizione di supporto - after component -->
 
-	  <footer class="wrapper footer">
+	  <footer class="footer">
 	    <div class="container footer-wrapper">
-	      <div class="row footer-sitename">
-	        <div class="col-12 d-flex align-items-center">
-	          <?php if(isset($logo) AND $logo != '') : ?>
-	            <img src="<?php echo $logo ?>" class="rounded img-fluid float-left mr-3" alt="<?php echo $siteName ?>">
-	          <?php else : ?>
-	            <img src="http://logo.pizza/img/tri-arc/tri-arc-connected.svg" width="80" height="80" class="rounded img-fluid float-left mr-3" alt="<?php echo $siteName ?>">
-	          <?php endif; ?>
-	          <p><?= $sitename ?></p>
-	        </div>
-	      </div>
-
 	      <?php if ($this->countModules('footer-bottom')) : ?>
 	      <div class="row footer-bottom">
 	        <jdoc:include type="modules" name="footer-bottom" style="footer" />
