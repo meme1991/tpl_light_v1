@@ -433,8 +433,8 @@ else
 					if ($showDownloadForm)
 					{
 						?>
-							<a data-toggle="modal" data-document-title="<?php echo $item->title; ?>" class="email-popup edocman-download-link" href="#form-content" id="<?php echo $item->id; ?>" target="<?php echo $target;?>" title="<?php echo JText::_('EDOCMAN_CLICK_HERE_TO_DOWNLOAD_DOCUMENT');?>">
-								<span class="edocman_download_label">
+							<a data-toggle="modal" data-document-title="<?php echo $item->title; ?>" class="email-popup download-link btn btn-outline-primary" href="#form-content" id="<?php echo $item->id; ?>" target="<?php echo $target;?>" title="<?php echo JText::_('EDOCMAN_CLICK_HERE_TO_DOWNLOAD_DOCUMENT');?>">
+								<span class="download_label">
 									<i class="edicon edicon-cloud-download"></i>
 									<?php
 									$fileName = $item->filename;
@@ -521,8 +521,8 @@ else
 				elseif(($config->login_to_download) and ((int)$userId == 0) and ($hide_download_button != 1) and ($accept_license == 0))
                 {
 					?>
-					<a data-toggle="modal" class="email-popup edocman-download-link edocman-download-btn" href="#login-form">
-						<span class="edocman_download_label">
+					<a data-toggle="modal" class="email-popup download-link btn btn-outline-primary " href="#login-form">
+						<span class="download_label">
 							<?php
 							echo JText::_('EDOCMAN_LOGIN_TO_DOWNLOAD'); ?>
 						</span>

@@ -113,7 +113,11 @@
 
 // modal
 #form-content{
+  max-width: 500px;
   height: auto !important;
+  #downloadsuccess{
+    margin: 15px;
+  }
   strong{
     font-weight: 700;
   }
