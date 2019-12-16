@@ -4,7 +4,7 @@
 // @Date:   30-07-2019
 // @Email:  sviluppo@spedi.it
 // @Last modified by:   SPEDI srl
-// @Last modified time: 13-12-2019
+// @Last modified time: 16-12-2019
 // @License: GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
 // @Copyright: Copyright (C) SPEDI srl
 
@@ -50,7 +50,7 @@
           }
         }
         .document-short-desc{
-          font-size: 16px;
+          font-size: 14px;
           color: $gray-600;
         }
       }
@@ -68,6 +68,77 @@
   .edocman-box-heading{
     background-color: transparent;
     border: 0;
+  }
+  #edocman-document-details{
+    border: 0;
+    .edocman-description-details{
+      .thumbnail{
+        border: 0;
+      }
+      p{
+        color: $gray-600;
+        text-align: justify;
+      }
+    }
+    #edocman-document-info{
+      table{
+        border: 0;
+        font-size: 14px;
+        td{
+          background-color: $white;
+          border: 0;
+          border-top: 2px $light solid !important;
+          &.edocman-document-property-label{
+            font-weight: 700;
+          }
+          &.edocman-document-property-value{
+
+          }
+        }
+      }
+    }
+    .licensebox{
+      border: 0;
+      background-color: $white;
+      > strong{
+        font-size: 20px;
+      }
+      p{
+        font-style: italic;
+      }
+    }
+  }
+}
+
+
+// modal
+#form-content{
+  height: auto !important;
+  strong{
+    font-weight: 700;
+  }
+  padding-right: 0 !important;
+  .modal-header{
+    padding: 10px;
+    h2{
+      color: $white;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      font-size: 22px;
+    }
+  }
+  .modal-body-download{
+    padding: 20px;
+    #download-instruction{
+      color: $dark;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  .privacy{
+    input, span{
+      display: inline-block;
+    }
   }
 }
 

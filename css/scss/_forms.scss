@@ -133,6 +133,7 @@ select {
 
 input[type=text],
 input[type=select],
+input[type=email],
 textarea,
 input[readonly=readonly]{
   @extend .form-control;

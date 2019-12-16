@@ -16,9 +16,13 @@ $controlsClass     = $bootstrapHelper->getClassMapping('controls');
 $rowFluidClass	   = $bootstrapHelper->getClassMapping('row-fluid');
 $span12Class	   = $bootstrapHelper->getClassMapping('span12');
 ?>
-
-<div id="form-content" class="modal fade pr-0" style="display: none;">
+<div id="form-content" class="modal fade" style="display: none;">
 	<div class="modal-header">
+		<?php
+		if($config->twitter_bootstrap_version == 2){	
+		?>
+			<a class="close" data-dismiss="modal">x</a>
+		<?php } ?>
 		<h2><?php echo JText::_('EDOCMAN_DOWNLOAD_DOCUMENT'); ?></h2>
 	</div>
 	<div class="alert alert-success" id="downloadsuccess">
@@ -28,7 +32,7 @@ $span12Class	   = $bootstrapHelper->getClassMapping('span12');
 	<div class="modal-body-download <?php echo $rowFluidClass;?>">
 		<div class="<?php echo $span12Class?>">
 			<form class="edocman-download-form form form-horizontal" name="download-form">
-				<p id="download-instruction"><?php echo JText::_('EDOCMAN_COMPLETE_FORM_TO_DOWNLOAD'); ?></p>
+				<p class="text-info" id="download-instruction"><?php echo JText::_('EDOCMAN_COMPLETE_FORM_TO_DOWNLOAD'); ?></p>
 				<div class="<?php echo $controlGroupClass;  ?>">
 					<label class="<?php echo $controlLabelClass; ?>" for="name">
 						<?php echo  JText::_('EDOCMAN_NAME') ?><span class="required">*</span>
@@ -38,7 +42,7 @@ $span12Class	   = $bootstrapHelper->getClassMapping('span12');
 					</div>
 				</div>
 
-				<div class="mb-0 <?php echo $controlGroupClass;  ?>">
+				<div class="<?php echo $controlGroupClass;  ?>">
 					<label class="<?php echo $controlLabelClass; ?>" for="name">
 						<?php echo  JText::_('EDOCMAN_EMAIL') ?><span class="required">*</span>
 					</label>
@@ -46,20 +50,24 @@ $span12Class	   = $bootstrapHelper->getClassMapping('span12');
 						<input id="email" type="email" name="email" value="" class="input-xlarge"><br>
 					</div>
 				</div>
-        <?php if($config->turn_on_privacy): ?>
-	        <div class="privacy <?php echo $controlGroupClass;  ?>">
-	          <label id="privacy_agreement_span">
-							<input type="checkbox" name="privacy_agreement" id="privacy_agreement" value="0"/>
-		          <?php echo JText::_('EDOCMAN_AGREE_PRIVACY_POLICY_MESSAGE'); ?>
-					</label>
-	        </div>
-				<?php endif; ?>
+                <?php
+                if($config->turn_on_privacy){
+                ?>
+                <div class="<?php echo $controlGroupClass;  ?>">
+                    <input type="checkbox" name="privacy_agreement" id="privacy_agreement" value="0"/>
+                    <span id="privacy_agreement_span">
+                    <?php
+                    echo JText::_('EDOCMAN_AGREE_PRIVACY_POLICY_MESSAGE');
+                    ?>
+                    </span>
+                </div>
+                <?php } ?>
 			</div>
 		</form>
 	</div>
 	<div class="modal-footer">
-		<input class="btn btn-outline-primary btn-send" type="button" value="<?php echo JText::_('SCARICA'); ?>">
-		<a href="#" class="btn btn-outline-secondary btn-close" data-dismiss="modal"><?php echo JText::_('EDOCMAN_CLOSE'); ?></a>
+		<input class="btn btn-success btn-send" type="button" value="<?php echo JText::_('EDOCMAN_PROCESS'); ?>">
+		<a href="#" class="btn btn-close" data-dismiss="modal"><?php echo JText::_('EDOCMAN_CLOSE'); ?></a>
 	</div>
 </div>
 
@@ -90,8 +98,8 @@ $span12Class	   = $bootstrapHelper->getClassMapping('span12');
 				backdrop: true,
 				keyboard: true
 			}).css({
-				// width: '300px',
-				// height: '400px',
+				width: '300px',
+				height: '400px',
 				'margin-left': function () {
 					return 0;
 				}
@@ -104,8 +112,8 @@ $span12Class	   = $bootstrapHelper->getClassMapping('span12');
 				backdrop: true,
 				keyboard: true
 			}).css({
-				// width: '500px',
-				// height: '400px',
+				width: '500px',
+				height: '400px',
 				'margin-left': function () {
 					return -($(this).width() / 2);
 				}
@@ -114,22 +122,22 @@ $span12Class	   = $bootstrapHelper->getClassMapping('span12');
 
 		//bootstrap 3
 		<?php
-		if($config->twitter_bootstrap_version == 3){
+		if($config->twitter_bootstrap_version == 3){	
 		?>
 		$(document).on('hide.bs.modal','#form-content', function () {  window.location = '<?php echo JUri::getInstance()->toString();?>' });
 		<?php
-		}elseif($config->twitter_bootstrap_version == 2){
+		}elseif($config->twitter_bootstrap_version == 2){	
 		?>
 		//bootstrap 2
 		//$modal.on('hidden', function () { window.location = '<?php echo JUri::getInstance()->toString();?>' });
 		<?php
-		}elseif($config->twitter_bootstrap_version == 4){
+		}elseif($config->twitter_bootstrap_version == 4){	
 		?>
 		$modal.on('click', '.btn-close', function(e){
 			window.location = '<?php echo JUri::getInstance()->toString();?>'
 		})
 		<?php
-		}
+		}	
 		?>
 		$modal.on('click', '.btn-send', function(e){
 			e.preventDefault();

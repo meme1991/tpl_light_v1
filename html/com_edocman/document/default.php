@@ -317,6 +317,24 @@ else
 						?>
 					</div>
 
+					<?php if ($item->tags) : ?>
+						<?php $tags = explode(',', $item->tags); ?>
+						<div class="">
+							<ul class="tags list-inline clearfix">
+								<?php
+								foreach ($tags as $tag)
+								{
+								?>
+									<li class="list-inline-item">
+										<a class="btn btn-outline-primary btn-sm" href="<?php echo JRoute::_('index.php?option=com_edocman&view=search&filter_tag='.$tag.'&Itemid='.$this->Itemid); ?>" title="<?php echo $tag; ?>"><?php echo $tag; ?></a>
+									</li>
+								<?php
+								}
+								?>
+							</ul>
+						</div>
+					<?php endif; ?>
+
 				    <?php
 				    //show plugin
 				    foreach ($this->plugins as $plugin)
@@ -329,7 +347,7 @@ else
 				    ?>
 
 					<div id="edocman-document-info" class="clearfix">
-						<table class="table table-bordered table-striped" id="documentdetails">
+						<table class="table" id="documentdetails">
 							<tbody>
 							<?php
 								if (($this->config->show_filename) && ($this->item->original_filename))
@@ -400,7 +418,7 @@ else
 								{
 								?>
 									<tr>
-										<td class="edocman-document-property-label"><strong><?php echo JText::_('EDOCMAN_DOWNLOAD'); ?>:</strong></td>
+										<td class="edocman-document-property-label"><?php echo JText::_('EDOCMAN_DOWNLOAD'); ?>:</td>
 										<td class="edocman-document-property-value">
 											<?php echo $item->downloads; ?> <?php echo JText::_('EDOCMAN_TIMES');?>
 										</td>
@@ -412,7 +430,7 @@ else
 								{
 								?>
 									<tr>
-										<td class="edocman-document-property-label"><strong><?php echo JText::_('EDOCMAN_CREATED_USER'); ?>:</strong></td>
+										<td class="edocman-document-property-label"><?php echo JText::_('EDOCMAN_CREATED_USER'); ?>:</td>
 										<td class="edocman-document-property-value">
 											<?php
 											$created_user = JFactory::getUser($created_user_id);
@@ -426,7 +444,7 @@ else
 								{
 								?>
 									<tr>
-										<td class="edocman-document-property-label"><strong><?php echo JText::_('EDOCMAN_CREATED_DATE'); ?>:</strong></td>
+										<td class="edocman-document-property-label"><?php echo JText::_('EDOCMAN_CREATED_DATE'); ?>:</td>
 										<td class="edocman-document-property-value">
 											<?php echo JHtml::_('date', $item->created_time, $this->config->date_format); ?>
 										</td>
@@ -498,25 +516,6 @@ else
 						</table>
 				   </div>
 					<?php
-					if ($item->tags)
-					{
-						$tags = explode(',', $item->tags);
-					?>
-						<ul class="edocman_tag_container clearfix">
-							<?php
-							foreach ($tags as $tag)
-							{
-							?>
-								<li>
-									<a href="<?php echo JRoute::_('index.php?option=com_edocman&view=search&filter_tag='.$tag.'&Itemid='.$this->Itemid); ?>" title="<?php echo $tag; ?>"><?php echo $tag; ?></a>
-								</li>
-							<?php
-							}
-							?>
-						</ul>
-					<?php
-					}
-
 					if ($this->default_license > 0)
 					{
 					?>
