@@ -43,42 +43,6 @@
 @import "bootstrapv4/print";
 
 
-// @import "bootstrapv4/functions";
-// @import "bootstrap_variables.scss";
-// @import "bootstrapv4/mixins";
-// @import "bootstrapv4/root";
-// @import "bootstrapv4/reboot";
-// @import "bootstrapv4/type";
-// @import "bootstrapv4/images";
-// @import "bootstrapv4/code";
-// @import "bootstrapv4/grid";
-// @import "bootstrapv4/tables";
-// @import "bootstrapv4/forms";
-// @import "bootstrapv4/buttons";
-// @import "bootstrapv4/transitions";
-// @import "bootstrapv4/dropdown";
-// @import "bootstrapv4/button-group";
-// @import "bootstrapv4/input-group";
-// @import "bootstrapv4/custom-forms";
-// @import "bootstrapv4/nav";
-// @import "bootstrapv4/navbar";
-// @import "bootstrapv4/card";
-// @import "bootstrapv4/breadcrumb";
-// @import "bootstrapv4/pagination";
-// @import "bootstrapv4/badge";
-// @import "bootstrapv4/jumbotron";
-// @import "bootstrapv4/alert";
-// @import "bootstrapv4/progress";
-// @import "bootstrapv4/media";
-// @import "bootstrapv4/list-group";
-// @import "bootstrapv4/close";
-// @import "bootstrapv4/modal";
-// @import "bootstrapv4/tooltip";
-// @import "bootstrapv4/popover";
-// @import "bootstrapv4/carousel";
-// @import "bootstrapv4/utilities";
-// @import "bootstrapv4/print";
-
 /*************************
         TEMPLATE
 ************************/
@@ -105,6 +69,7 @@
 @import "com_search.scss";
 @import "com_tags.scss";
 @import "com_edocman.scss";
+@import "com_eshop.scss";
 
 // moduli
 @import "mod_breadcrumbs.scss";
