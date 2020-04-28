@@ -76,8 +76,8 @@ else
 					?>
 					<tr>
 						<td class="eshop-center-text" style="vertical-align: middle;" data-content="<?php echo JText::_('ESHOP_REMOVE'); ?>">
-							<a class="eshop-remove-item-cart" id="<?php echo $key; ?>" style="cursor: pointer;">
-								<img alt="<?php echo JText::_('ESHOP_REMOVE'); ?>" title="<?php echo JText::_('ESHOP_REMOVE'); ?>" src="<?php echo JUri::base(true); ?>/components/com_eshop/assets/images/remove.png" />
+							<a class="eshop-remove-item-cart" id="<?php echo $key; ?>" style="cursor: pointer;" title="<?php echo JText::_('ESHOP_REMOVE'); ?>">
+								<i class="fal fa-trash-alt"></i>
 							</a>
 						</td>
 						<td class="muted eshop-center-text" style="vertical-align: middle;" data-content="<?php echo JText::_('ESHOP_IMAGE'); ?>">
@@ -97,7 +97,7 @@ else
 								<?php
 							}
 							?>
-							<br />	
+							<br />
 							<?php
 							for ($i = 0; $n = count($optionData), $i < $n; $i++)
 							{
@@ -164,7 +164,7 @@ else
 							<?php echo $data['title']; ?>:
 							<?php echo $data['text']; ?>
 						</div>
-					<?php	
+					<?php
 				} ?>
 			</div>
 			<?php
@@ -173,9 +173,9 @@ else
     </div>
     <div class="bottom <?php echo $controlGroupClass; ?>" style="text-align: center;">
 		<div class="controls">
-			<a class="<?php echo $btnClass; ?> btn-danger" href="<?php echo JRoute::_(EshopHelper::getContinueShopingUrl()); ?>"><?php echo JText::_('ESHOP_CONTINUE_SHOPPING'); ?></a>
-			<button type="button" class="<?php echo $btnClass; ?> btn-info" onclick="updateCart();" id="update-cart"><?php echo JText::_('ESHOP_UPDATE_CART'); ?></button>
-			<a class="<?php echo $btnClass; ?> btn-success" href="<?php echo JRoute::_(EshopRoute::getViewRoute('cart')); ?>"><?php echo JText::_('ESHOP_SHOPPING_CART'); ?></a>
+			<a class="btn btn-outline-secondary" href="<?php echo JRoute::_(EshopHelper::getContinueShopingUrl()); ?>"><?php echo JText::_('ESHOP_CONTINUE_SHOPPING'); ?></a>
+			<button type="button" class="btn btn-outline-secondary" onclick="updateCart();" id="update-cart"><?php echo JText::_('ESHOP_UPDATE_CART'); ?></button>
+			<a class="btn btn-outline-primary" href="<?php echo JRoute::_(EshopRoute::getViewRoute('cart')); ?>"><?php echo JText::_('ESHOP_SHOPPING_CART'); ?></a>
 			<?php
 			if (EshopHelper::getConfigValue('active_https'))
 			{
@@ -186,10 +186,10 @@ else
 				$checkoutUrl = JRoute::_(EshopRoute::getViewRoute('checkout'));
 			}
 			?>
-			<a class="<?php echo $btnClass; ?> btn-primary" href="<?php echo $checkoutUrl; ?>"><?php echo JText::_('ESHOP_CHECKOUT'); ?></a>
+			<a class="btn btn-primary" href="<?php echo $checkoutUrl; ?>"><?php echo JText::_('ESHOP_CHECKOUT'); ?></a>
 		</div>
 	</div>
-	
+
 	<script type="text/javascript">
 		//Function to update cart
 		function updateCart()

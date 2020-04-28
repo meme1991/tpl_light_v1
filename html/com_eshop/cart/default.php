@@ -82,8 +82,8 @@ else
 					?>
 					<tr>
 						<td class="eshop-center-text" style="vertical-align: middle;" data-content="<?php echo JText::_('ESHOP_REMOVE'); ?>">
-							<a class="eshop-remove-item-cart" id="<?php echo $key; ?>" style="cursor: pointer;">
-								<img alt="<?php echo JText::_('ESHOP_REMOVE'); ?>" title="<?php echo JText::_('ESHOP_REMOVE'); ?>" src="<?php echo JUri::base(true); ?>/components/com_eshop/assets/images/remove.png" />
+							<a class="eshop-remove-item-cart" id="<?php echo $key; ?>" style="cursor: pointer;"  title="<?php echo JText::_('ESHOP_REMOVE'); ?>">
+								<i class="fal fa-trash-alt"></i>
 							</a>
 						</td>
 						<td class="muted eshop-center-text" style="vertical-align: middle;" data-content="<?php echo JText::_('ESHOP_IMAGE'); ?>">
@@ -171,26 +171,28 @@ else
 			</tbody>
 		</table>
     </div>
-    <div class="<?php echo $controlGroupClass; ?>" style="text-align: center;">
-		<div class="<?php echo $controlsClass; ?>">
-			<button type="button" class="<?php echo $btnClass; ?> btn-primary" onclick="updateCart();" id="update-cart"><?php echo JText::_('ESHOP_UPDATE_CART'); ?></button>
+    <div class="<?php echo $controlGroupClass; ?> text-right">
+			<div class="col">
+				<button type="button" class="btn btn-outline-primary" onclick="updateCart();" id="update-cart"><?php echo JText::_('ESHOP_UPDATE_CART'); ?></button>
+			</div>
 		</div>
-	</div>
     <?php
 	if (EshopHelper::getConfigValue('allow_coupon'))
 	{
 		?>
-		<table class="table table-bordered table-striped">
+		<table class="table table-bordered table-striped table-coupon-code">
 			<tbody>
 				<tr>
 					<td class="form-horizontal">
-						<div class="<?php echo $controlGroupClass; ?>">
-							<label for="coupon_code" class="<?php echo $controlLabelClass; ?>"><strong><?php echo JText::_('ESHOP_COUPON_TEXT'); ?>: </strong></label>
-							<div class="<?php echo $controlsClass; ?>">
+						<div class="form-group row mb-0">
+							<label for="coupon_code" class="col-12 col-md-3"><strong><?php echo JText::_('ESHOP_COUPON_TEXT'); ?>: </strong></label>
+					    <div class="col-12 col-md-7">
 								<input type="text" id="coupon_code" name="coupon_code" class="input-large" value="<?php echo htmlspecialchars($this->coupon_code, ENT_COMPAT, 'UTF-8'); ?>">
-								<button type="button" class="<?php echo $btnClass; ?> btn-primary" onclick="applyCoupon();" id="apply-coupon"><?php echo JText::_('ESHOP_COUPON_APPLY'); ?></button>
-							</div>
-						</div>
+					    </div>
+							<div class="col-12 col-md-2">
+								<button type="button" class="btn btn-primary" onclick="applyCoupon();" id="apply-coupon"><?php echo JText::_('ESHOP_COUPON_APPLY'); ?></button>
+					    </div>
+					  </div>
 					</td>
 				</tr>
 			</tbody>
@@ -200,17 +202,19 @@ else
 	if (EshopHelper::getConfigValue('allow_voucher'))
 	{
 		?>
-		<table class="table table-bordered table-striped">
+		<table class="table table-bordered table-striped table-voucher-code">
 			<tbody>
 				<tr>
 					<td class="form-horizontal">
-						<div class="<?php echo $controlGroupClass; ?>">
+						<div class="form-group row mb-0">
 							<label for="voucher_code" class="<?php echo $controlLabelClass; ?>"><strong><?php echo JText::_('ESHOP_VOUCHER_TEXT'); ?>: </strong></label>
-							<div class="<?php echo $controlsClass; ?>">
+					    <div class="col-12 col-md-7">
 								<input type="text" id="voucher_code" name="voucher_code" class="input-large" value="<?php echo htmlspecialchars($this->voucher_code, ENT_COMPAT, 'UTF-8'); ?>">
-								<button type="button" class="<?php echo $btnClass; ?> btn-primary" onclick="applyVoucher();" id="apply-voucher"><?php echo JText::_('ESHOP_VOUCHER_APPLY'); ?></button>
-							</div>
-						</div>
+					    </div>
+							<div class="col-12 col-md-2">
+								<button type="button" class="btn btn-primary" onclick="applyVoucher();" id="apply-voucher"><?php echo JText::_('ESHOP_VOUCHER_APPLY'); ?></button>
+					    </div>
+					  </div>
 					</td>
 				</tr>
 			</tbody>
@@ -220,34 +224,34 @@ else
 	if (EshopHelper::getConfigValue('shipping_estimate') && $this->shipping_required)
 	{
 		?>
-		<table class="table table-bordered table-striped">
+		<table class="table table-bordered table-striped table-shipping">
 			<tbody>
 				<tr>
 					<th><?php echo JText::_('ESHOP_SHIPPING_ESTIMATE_TEXT'); ?></th>
 				</tr>
 				<tr>
 					<td class="form-horizontal">
-						<div class="<?php echo $controlGroupClass; ?>">
-							<label for="country_id" class="<?php echo $controlLabelClass; ?>"><span class="required">*</span><strong><?php echo JText::_('ESHOP_COUNTRY'); ?>:</strong></label>
-							<div class="<?php echo $controlsClass; ?>">
+						<div class="form-group row">
+							<label for="country_id" class="col-12 col-md-3"><span class="required">*</span><strong><?php echo JText::_('ESHOP_COUNTRY'); ?>:</strong></label>
+							<div class="col-12 col-md-9">
 								<?php echo $this->lists['country_id']; ?>
 							</div>
 						</div>
-						<div class="<?php echo $controlGroupClass; ?>">
-							<label for="zone_id" class="<?php echo $controlLabelClass; ?>"><span class="required">*</span><strong><?php echo JText::_('ESHOP_REGION_STATE'); ?>:</strong></label>
-							<div class="<?php echo $controlsClass; ?>">
+						<div class="form-group row">
+							<label for="zone_id" class="col-12 col-md-3"><span class="required">*</span><strong><?php echo JText::_('ESHOP_REGION_STATE'); ?>:</strong></label>
+							<div class="col-12 col-md-9">
 								<?php echo $this->lists['zone_id']; ?>
 							</div>
 						</div>
-						<div class="<?php echo $controlGroupClass; ?>">
-							<label for="postcode" class="<?php echo $controlLabelClass; ?>"><span class="required" id="postcode-required" style="display: none;">*</span><strong><?php echo JText::_('ESHOP_POST_CODE'); ?>:</strong></label>
-							<div class="<?php echo $controlsClass; ?>">
-								<input class="input-small" name="postcode" id="postcode" value="<?php echo $this->postcode; ?>" />
+						<div class="form-group row">
+							<label for="postcode" class="col-12 col-md-3"><span class="required" id="postcode-required" style="display: none;">*</span><strong><?php echo JText::_('ESHOP_POST_CODE'); ?>:</strong></label>
+							<div class="col-12 col-md-9">
+								<input class="form-control" name="postcode" id="postcode" value="<?php echo $this->postcode; ?>" />
 							</div>
 						</div>
-						<div class="<?php echo $controlGroupClass; ?>">
-							<div class="<?php echo $controlsClass; ?>">
-								<button type="button" id="get-quotes" class="<?php echo $btnClass; ?> btn-primary"><?php echo JText::_('ESHOP_GET_QUOTES'); ?></button>
+						<div class="form-group row">
+							<div class="col-12 text-right">
+								<button type="button" id="get-quotes" class="btn btn-primary"><?php echo JText::_('ESHOP_GET_QUOTES'); ?></button>
 							</div>
 						</div>
 					</td>
@@ -257,7 +261,7 @@ else
 		<?php
 	}
 	?>
-	<a class="<?php echo $btnClass; ?> btn-primary" href="<?php echo JRoute::_(EshopHelper::getContinueShopingUrl()); ?>"><?php echo JText::_('ESHOP_CONTINUE_SHOPPING'); ?></a>
+	<a class="btn btn-outline-secondary" href="<?php echo JRoute::_(EshopHelper::getContinueShopingUrl()); ?>"><?php echo JText::_('ESHOP_CONTINUE_SHOPPING'); ?></a>
 	<?php
 	if (EshopHelper::getConfigValue('active_https'))
 	{
@@ -268,7 +272,7 @@ else
 		$checkoutUrl = JRoute::_(EshopRoute::getViewRoute('checkout'));
 	}
 	?>
-	<a class="<?php echo $btnClass; ?> btn-primary <?php echo $pullRightClass; ?>" href="<?php echo $checkoutUrl; ?>"><?php echo JText::_('ESHOP_CHECKOUT'); ?></a>
+	<a class="btn btn-primary <?php echo $pullRightClass; ?>" href="<?php echo $checkoutUrl; ?>"><?php echo JText::_('ESHOP_CHECKOUT'); ?></a>
 
 	<script type="text/javascript">
 		//Function to update cart
@@ -519,7 +523,7 @@ else
 								var firstShippingOption = true;
 								for (i in json['shipping_methods'])
 								{
-									html += '<div>';
+									html += '<div class="mb-3">';
 									html += '<strong>' + json['shipping_methods'][i]['title'] + '</strong><br />';
 									if (!json['shipping_methods'][i]['error'])
 									{
@@ -564,7 +568,7 @@ else
 									}
 									html += '</div>';
 								}
-								html += '<input class="<?php echo $btnClass; ?> btn-primary" type="button" onclick="applyShipping();" id="apply-shipping" value="<?php echo JText::_('ESHOP_SHIPPING_APPLY'); ?>">';
+								html += '<input class="btn btn-primary" type="button" onclick="applyShipping();" id="apply-shipping" value="<?php echo JText::_('ESHOP_SHIPPING_APPLY'); ?>">';
 								html += '</form>';
 								html += '</div>';
 								$.colorbox({

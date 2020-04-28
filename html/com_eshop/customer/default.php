@@ -16,7 +16,7 @@ if (isset($this->success))
 	<?php
 }
 ?>
-<section class="eshop-account-default">
+<section class="wrapper container eshop-account-default">
 	<h1><?php echo JText::_('ESHOP_MY_ACCOUNT'); ?></h1>
 	<?php if (EshopHelper::getConfigValue('customer_manage_account', '1') || EshopHelper::getConfigValue('customer_manage_order', '1') || EshopHelper::getConfigValue('customer_manage_download', '1') || EshopHelper::getConfigValue('customer_manage_address', '1')) : ?>
 		<div class="container-fluid">

@@ -17,6 +17,7 @@ $controlsClass          = $bootstrapHelper->getClassMapping('controls');
 $pullRightClass         = $bootstrapHelper->getClassMapping('pull-right');
 $btnClass				= $bootstrapHelper->getClassMapping('btn');
 ?>
+<section class="wrapper container">
 <h1>
 	<?php echo JText::_('ESHOP_CHECKOUT'); ?>
 	<?php
@@ -373,3 +374,4 @@ $btnClass				= $bootstrapHelper->getClassMapping('btn');
 		?>
 	});
 </script>
+</section>

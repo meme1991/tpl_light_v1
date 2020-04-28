@@ -206,18 +206,53 @@
     }
   }
 
+  .cart-info{
+    .eshop-quantity{
+      input[type="text"]{
+        border-radius: 0;
+        margin: 0;
+        border-top: 0;
+        border-bottom: 0;
+      }
+      .btn.button-plus, .btn.button-minus{
+        border: 1px $primary solid;
+      }
+    }
+  }
+
+  .table-shipping{
+    select{
+      width: 100%;
+    }
+  }
+  // .table-coupon-code{
+  //   .form-group{
+  //     > div{
+  //       input, button{
+  //         display: inline;
+  //       }
+  //     }
+  //   }
+  // }
+
   table{
     thead{
       td{
         background-color: $light !important;
         font-weight: 600 !important;
+        vertical-align: middle !important;
       }
     }
     tbody{
       td{
         background-color: $white !important;
+        vertical-align: middle !important;
       }
     }
+  }
+
+  .table-responsive{
+    border: 0 !important;
   }
 
 
@@ -380,6 +415,30 @@
     }
   }
 }
+
+
+// carrello
+// popup
+#colorbox #cboxContent{
+  #cboxMiddleLeft,#cboxContent,#cboxLoadedContent{
+    height: 100% !important;
+  }
+  #cboxClose {
+    top: 23px;
+  }
+  .eshop-quantity{
+    input[type="text"]{
+      border-radius: 0;
+      margin: 0;
+      border-top: 0;
+      border-bottom: 0;
+    }
+    .btn.button-plus, .btn.button-minus{
+      border: 1px $primary solid;
+    }
+  }
+}
+
 
 
 .eshop-account-default{
