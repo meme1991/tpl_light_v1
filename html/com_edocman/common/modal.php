@@ -16,50 +16,64 @@ $controlsClass     = $bootstrapHelper->getClassMapping('controls');
 $rowFluidClass	   = $bootstrapHelper->getClassMapping('row-fluid');
 $span12Class	   = $bootstrapHelper->getClassMapping('span12');
 ?>
-
-<div id="form-content" class="modal fade pr-0" style="display: none;">
-	<div class="modal-header">
-		<h2><?php echo JText::_('EDOCMAN_DOWNLOAD_DOCUMENT'); ?></h2>
-	</div>
-	<div class="alert alert-success" id="downloadsuccess">
-		<a href="#" class="close" data-dismiss="alert">&times;</a>
-		<p id="download-complete-message" class="download-complete-message"></p>
-	</div>
-	<div class="modal-body-download <?php echo $rowFluidClass;?>">
-		<div class="<?php echo $span12Class?>">
-			<form class="edocman-download-form form form-horizontal" name="download-form">
-				<p id="download-instruction"><?php echo JText::_('EDOCMAN_COMPLETE_FORM_TO_DOWNLOAD'); ?></p>
-				<div class="<?php echo $controlGroupClass;  ?>">
-					<label class="<?php echo $controlLabelClass; ?>" for="name">
-						<?php echo  JText::_('EDOCMAN_NAME') ?><span class="required">*</span>
-					</label>
-					<div class="<?php echo $controlsClass; ?>">
-						<input type="text" name="name" id="edocman-name" class="input-xlarge"/>
-					</div>
-				</div>
-
-				<div class="mb-0 <?php echo $controlGroupClass;  ?>">
-					<label class="<?php echo $controlLabelClass; ?>" for="name">
-						<?php echo  JText::_('EDOCMAN_EMAIL') ?><span class="required">*</span>
-					</label>
-					<div class="<?php echo $controlsClass; ?>">
-						<input id="email" type="email" name="email" value="" class="input-xlarge"><br>
-					</div>
-				</div>
-        <?php if($config->turn_on_privacy): ?>
-	        <div class="privacy <?php echo $controlGroupClass;  ?>">
-	          <label id="privacy_agreement_span">
-							<input type="checkbox" name="privacy_agreement" id="privacy_agreement" value="0"/>
-		          <?php echo JText::_('EDOCMAN_AGREE_PRIVACY_POLICY_MESSAGE'); ?>
-					</label>
-	        </div>
-				<?php endif; ?>
+<div id="form-content" class="modal fade" style="display: none;">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<?php
+				if($config->twitter_bootstrap_version == 2){
+				?>
+					<a class="close" data-dismiss="modal">x</a>
+				<?php } ?>
+				<h2><?php echo JText::_('EDOCMAN_DOWNLOAD_DOCUMENT'); ?></h2>
 			</div>
-		</form>
-	</div>
-	<div class="modal-footer">
-		<input class="btn btn-outline-primary btn-send" type="button" value="<?php echo JText::_('SCARICA'); ?>">
-		<a href="#" class="btn btn-outline-secondary btn-close" data-dismiss="modal"><?php echo JText::_('EDOCMAN_CLOSE'); ?></a>
+			<div class="p-3">
+				<div class="alert alert-success" id="downloadsuccess">
+					<a href="#" class="close" data-dismiss="alert">&times;</a>
+					<p id="download-complete-message" class="download-complete-message"></p>
+				</div>
+			</div>
+			<div class="modal-body modal-body-download <?php echo $rowFluidClass;?>">
+				<div class="<?php echo $span12Class?>">
+					<form class="edocman-download-form form form-horizontal" name="download-form">
+						<p id="download-instruction"><?php echo JText::_('EDOCMAN_COMPLETE_FORM_TO_DOWNLOAD'); ?></p>
+						<div class="<?php echo $controlGroupClass;  ?>">
+							<label class="<?php echo $controlLabelClass; ?>" for="name">
+								<?php echo  JText::_('EDOCMAN_NAME') ?><span class="required">*</span>
+							</label>
+							<div class="<?php echo $controlsClass; ?>">
+								<input type="text" name="name" id="edocman-name" class="input-xlarge"/>
+							</div>
+						</div>
+
+						<div class="<?php echo $controlGroupClass;  ?>">
+							<label class="<?php echo $controlLabelClass; ?>" for="name">
+								<?php echo  JText::_('EDOCMAN_EMAIL') ?><span class="required">*</span>
+							</label>
+							<div class="<?php echo $controlsClass; ?>">
+								<input id="email" type="email" name="email" value="" class="input-xlarge"><br>
+							</div>
+						</div>
+		                <?php
+		                if($config->turn_on_privacy){
+		                ?>
+		                <div class="<?php echo $controlGroupClass;  ?>">
+		                    <input type="checkbox" name="privacy_agreement" id="privacy_agreement" value="0"/>
+		                    <span id="privacy_agreement_span">
+		                    <?php
+		                    echo JText::_('EDOCMAN_AGREE_PRIVACY_POLICY_MESSAGE');
+		                    ?>
+		                    </span>
+		                </div>
+		                <?php } ?>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<input class="btn btn-primary btn-send" type="button" value="<?php echo JText::_('EDOCMAN_PROCESS'); ?>">
+				<a href="#" class="btn btn-secondary" data-dismiss="modal"><?php echo JText::_('EDOCMAN_CLOSE'); ?></a>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -82,35 +96,35 @@ $span12Class	   = $bootstrapHelper->getClassMapping('span12');
 
 		var screenWidth = $( document ).width();
 
-		if(screenWidth < 400)
-		{
-			$('#form-content').removeClass('fade');
-			$('#form-content').modal({
-				show : false,
-				backdrop: true,
-				keyboard: true
-			}).css({
-				// width: '300px',
-				// height: '400px',
-				'margin-left': function () {
-					return 0;
-				}
-			});
-		}
-		else
-		{
-			$('#form-content').modal({
-				show : false,
-				backdrop: true,
-				keyboard: true
-			}).css({
-				// width: '500px',
-				// height: '400px',
-				'margin-left': function () {
-					return -($(this).width() / 2);
-				}
-			});
-		}
+		// if(screenWidth < 400)
+		// {
+		// 	$('#form-content').removeClass('fade');
+		// 	$('#form-content').modal({
+		// 		show : false,
+		// 		backdrop: true,
+		// 		keyboard: true
+		// 	}).css({
+		// 		width: '300px',
+		// 		height: '400px',
+		// 		'margin-left': function () {
+		// 			return 0;
+		// 		}
+		// 	});
+		// }
+		// else
+		// {
+		// 	$('#form-content').modal({
+		// 		show : false,
+		// 		backdrop: true,
+		// 		keyboard: true
+		// 	}).css({
+		// 		width: '500px',
+		// 		height: '400px',
+		// 		'margin-left': function () {
+		// 			return -($(this).width() / 2);
+		// 		}
+		// 	});
+		// }
 
 		//bootstrap 3
 		<?php

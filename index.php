@@ -61,7 +61,7 @@
 							<?php if(isset($logo) AND $logo != '') : ?>
 								<img src="<?php echo $logo ?>" alt="<?php echo $sitename ?>">
 							<?php else : ?>
-								<img src="http://logo.pizza/img/tri-arc/tri-arc-connected.svg" width="50" height="50" alt="<?php echo $siteName ?>">
+								<img src="http://logo.pizza/img/tri-arc/tri-arc-connected.svg" width="50" height="50" alt="<?php echo $sitename ?>">
 							<?php endif; ?>
 							<h1 class="sitename"><?php echo $sitename ?></h1>
 						</a>

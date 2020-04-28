@@ -296,7 +296,7 @@ else
 								{
 								?>
 									<li>
-										<a data-toggle="modal" data-document-title="<?php echo $item->title; ?>"  id="<?php echo $item->id; ?>" class="email-popup <?php echo $btnClass; ?>" href="#form-content">
+										<a data-toggle="modal" data-document-title="<?php echo $item->title; ?>"  id="<?php echo $item->id; ?>" class="email-popup btn btn-primary btn-sm" href="#form-content">
 											<?php if($item->document_url != ""){?>
 												<i class="edicon edicon-link"></i>
 												<?php echo JText::_('EDOCMAN_OPEN_DOCUMENT'); ?>
@@ -313,7 +313,7 @@ else
 								{
 								?>
 									<li>
-										<a class="<?php echo $btnClass; ?>" href="<?php echo $downloadUrl; ?>" target="<?php echo $target;?>">
+										<a class="btn btn-outline-primary btn-sm" href="<?php echo $downloadUrl; ?>" target="<?php echo $target;?>">
 											<?php if($item->document_url != ""){?>
 												<i class="edicon edicon-link"></i>
 											<?php }else{ ?>
@@ -327,7 +327,7 @@ else
 							}elseif(!$canDownload && $hide_download_button != 1 && $config->login_to_download && (int)$userId == 0){
 								?>
 								<li>
-									<a data-toggle="modal" class="email-popup edocman-download-link <?php echo $btnClass;?> edocman-download-btn" href="#login-form">
+									<a data-toggle="modal" class="email-popup edocman-download-link btn btn-outline-primary btn-sm edocman-download-btn" href="#login-form">
 										<span class="edocman_download_label">
 											<?php
 											echo JText::_('EDOCMAN_LOGIN_TO_DOWNLOAD'); ?>
@@ -338,7 +338,7 @@ else
 							}elseif($canDownload && $hide_download_button != 1 && ($accept_license == 1)){
 								?>
 									<li>
-										<a class="<?php echo $btnClass; ?>" href="<?php echo $url; ?>">
+										<a class="btn btn-outline-primary btn-sm" href="<?php echo $url; ?>">
 											<?php if($item->document_url != ""){?>
 												<i class="edicon edicon-link"></i>
 											<?php }else{ ?>
@@ -370,14 +370,14 @@ else
 										<?php
 										if($config->view_option == 0){
 										?>
-											<a href="<?php echo $viewUrl; ?>" class="<?php echo $btnClass; ?> edocman-modal" data-toggle="modal" <?php echo $audio_player;?>>
+											<a href="<?php echo $viewUrl; ?>" class="btn btn-outline-primary btn-sm edocman-modal" data-toggle="modal" <?php echo $audio_player;?>>
 												<i class="edicon edicon-eye"></i>
 												<?php echo JText::_('EDOCMAN_VIEW'); ?>
 											</a>
 										<?php
 										}else{
 										?>
-											<a href="<?php echo $viewUrl; ?>" class="<?php echo $btnClass; ?>" target="_blank" data-toggle="modal" <?php echo $audio_player;?>>
+											<a href="<?php echo $viewUrl; ?>" class="btn btn-outline-primary btn-sm" target="_blank" data-toggle="modal" <?php echo $audio_player;?>>
 												<i class="edicon edicon-eye"></i>
 												<?php echo JText::_('EDOCMAN_VIEW'); ?>
 											</a>
@@ -391,7 +391,7 @@ else
 									$viewUrl = JRoute::_('index.php?option=com_edocman&task=document.viewdoc&id=' . $item->id . '&Itemid=' . $Itemid);
 									?>
 									<li>
-										<a class="<?php echo $btnClass; ?>" href="<?php echo $viewUrl; ?>"
+										<a class="btn btn-outline-primary btn-sm" href="<?php echo $viewUrl; ?>"
 										   target="_blank">
 											<i class="edicon edicon-eye"></i>
 											<?php echo JText::_('EDOCMAN_VIEW'); ?>
@@ -405,7 +405,7 @@ else
 							{
 							?>
 								<li>
-									<a href="<?php echo $url; ?>" <?php echo $popup; ?>>
+									<a href="<?php echo $url; ?>" <?php echo $popup; ?> class="btn btn-outline-primary btn-sm">
 										<?php echo JText::_('EDOCMAN_DETAILS'); ?>
 									</a>
 								</li>
@@ -456,7 +456,7 @@ else
 								}
 							?>
 							<li>
-								<a href="<?php echo $url; ?>" class="<?php echo $btnClass; ?>">
+								<a href="<?php echo $url; ?>" class="btn btn-outline-primary btn-sm">
 									<i class="<?php echo $class; ?>"></i>
 									<?php echo $text; ?>
 								</a>

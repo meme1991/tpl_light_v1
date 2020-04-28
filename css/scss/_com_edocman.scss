@@ -13,6 +13,13 @@
     padding-left: 0;
     padding-right: 0;
   }
+  .sortPagiBar{
+    background-color: $light;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 // lista categorie
@@ -111,9 +118,11 @@
 }
 
 
+
 // modal
 #form-content{
-  max-width: 500px;
+  max-width: 100% !important;
+  // max-width: 500px;
   height: auto !important;
   #downloadsuccess{
     margin: 15px;
@@ -168,4 +177,9 @@
   &:hover{
     text-decoration: none;
   }
+}
+
+.edocman-document-title-link{
+  text-align: left;
+  @extend .edocmanxtdlink;
 }

@@ -568,7 +568,7 @@ else
 									{
 									?>
 										<li>
-											<a data-toggle="modal" data-document-title="<?php echo $this->item->title; ?>" title="<?php echo JText::_('EDOCMAN_DOWNLOAD'); ?>"  id="<?php echo $this->item->id; ?>" class="email-popup edocman-document-title-link <?php echo $btnClass; ?> <?php echo $disable_download_button;?> edocmandownloadlink" href="#form-content" target="<?php echo $target;?>">
+											<a data-toggle="modal" data-document-title="<?php echo $this->item->title; ?>" title="<?php echo JText::_('EDOCMAN_DOWNLOAD'); ?>"  id="<?php echo $this->item->id; ?>" class="email-popup edocman-document-title-link btn btn-outline-primary btn-sm <?php echo $disable_download_button;?> edocmandownloadlink" href="#form-content" target="<?php echo $target;?>">
 												<?php if($this->item->document_url != ""){
 													if($config->external_download_link == 1){
 														$target = "_blank";
@@ -590,7 +590,7 @@ else
 									{
 									?>
 										<li>
-											<a href="<?php echo $downloadUrl; ?>" class="edocmandownloadlink <?php echo $btnClass; ?> <?php echo $disable_download_button;?>" target="<?php echo $target;?>">
+											<a href="<?php echo $downloadUrl; ?>" class="edocmandownloadlink btn btn-outline-primary btn-sm <?php echo $disable_download_button;?>" target="<?php echo $target;?>">
 												<?php if($this->item->document_url != ""){?>
 													<i class="edicon edicon-link"></i>
 													<?php echo JText::_('EDOCMAN_OPEN_DOCUMENT'); ?>
@@ -635,14 +635,14 @@ else
 											<?php
 											if($config->view_option == 0){
 											?>
-												<a href="<?php echo $viewUrl; ?>" class="<?php echo $btnClass; ?> edocman-modal" data-toggle="modal" <?php echo $audio_player;?>>
+												<a href="<?php echo $viewUrl; ?>" class="btn btn-outline-primary btn-sm edocman-modal" data-toggle="modal" <?php echo $audio_player;?>>
 													<i class="edicon edicon-eye"></i>
 													<?php echo JText::_('EDOCMAN_VIEW'); ?>
 												</a>
 											<?php
 											}else{
 											?>
-												<a href="<?php echo $viewUrl; ?>" class="<?php echo $btnClass; ?>" target="_blank" data-toggle="modal" <?php echo $audio_player;?>>
+												<a href="<?php echo $viewUrl; ?>" class="btn btn-outline-primary btn-sm" target="_blank" data-toggle="modal" <?php echo $audio_player;?>>
 													<i class="edicon edicon-eye"></i>
 													<?php echo JText::_('EDOCMAN_VIEW'); ?>
 												</a>
@@ -656,7 +656,7 @@ else
 										$viewUrl = JRoute::_('index.php?option=com_edocman&task=document.viewdoc&id=' . $item->id . '&Itemid=' . $this->Itemid);
 										?>
 										<li>
-											<a href="<?php echo $viewUrl; ?>" target="_blank" class="<?php echo $btnClass; ?>">
+											<a href="<?php echo $viewUrl; ?>" target="_blank" class="btn btn-outline-primary btn-sm">
 												<i class="edicon edicon-eye"></i>
 												<?php echo JText::_('EDOCMAN_VIEW'); ?>
 											</a>
@@ -705,7 +705,7 @@ else
 									$url = JRoute::_('index.php?option=com_edocman&task=document.edit&id='.$item->id.'&Itemid='.$this->Itemid) ;
 									?>
 									<li>
-										<a href="<?php echo $url; ?>" class="<?php echo $btnClass; ?>">
+										<a href="<?php echo $url; ?>" class="btn btn-outline-primary btn-sm">
 											<i class="edocman-icon-pencil"></i>
 											<?php echo JText::_('EDOCMAN_EDIT'); ?>
 										</a>
@@ -716,7 +716,7 @@ else
 								{
 								?>
 									<li>
-										<a href="javascript:deleteConfirm();" class="<?php echo $btnClass; ?>">
+										<a href="javascript:deleteConfirm();" class="btn btn-outline-primary btn-sm">
 											<i class="edocman-icon-trash"></i>
 											<?php echo JText::_('EDOCMAN_DELETE'); ?>
 										</a>
@@ -739,7 +739,7 @@ else
 									}
 									?>
 									<li>
-										<a href="<?php echo $url; ?>" class="<?php echo $btnClass; ?>">
+										<a href="<?php echo $url; ?>" class="btn btn-outline-primary btn-sm">
 											<i class="<?php echo $class; ?>"></i>
 											<?php echo $text; ?>
 										</a>

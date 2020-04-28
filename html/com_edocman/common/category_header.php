@@ -6,8 +6,8 @@
 			?>
 				<strong><?php echo JText::_('EDOCMAN_DISPLAY'); ?></strong>
 				<div class="btn-group <?php $bootstrapHelper->getClassMapping('hidden-phone'); ?>">
-					<a rel="grid" href="#" class="btn"><i class="edocman-icon-th" title="<?php echo JText::_('EDOCMAN_GRID'); ?>"></i></a>
-					<a rel="list" href="#" class="btn"><i class="edocman-icon-th-list" title="<?php echo JText::_('EDOCMAN_LIST'); ?>"></i></a>
+					<a rel="grid" href="#" class="btn btn-link"><i class="fas fa-th-large" title="<?php echo JText::_('EDOCMAN_GRID'); ?>"></i></a>
+					<a rel="list" href="#" class="btn btn-link"><i class="fas fa-list" title="<?php echo JText::_('EDOCMAN_LIST'); ?>"></i></a>
 				</div>
 			<?php
 			}
