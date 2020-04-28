@@ -55,6 +55,8 @@
   unset($doc->_styleSheets[JURI::root().'/media/com_acymailing/css/component_default.css?v=1521647708']);
   // http://localhost/comuni_alt//media/com_acymailing/css/component_default.css?v=1521647708
 
+  // disabled com_osmembership styles
+  unset($doc->_styleSheets[JURI::root(true).'/media/com_osmembership/assets/css/style.min.css']);
 
   $doc->addScript($tpath.'/js/bootstrapv4/popper.min.js?v=1.0.0', 'text/javascript', true, false);
   $doc->addScript($tpath.'/js/bootstrapv4/bootstrap.min.js?v=1.0.0', 'text/javascript', true, false);

@@ -1,0 +1,27 @@
+// main:template.scss
+
+// plans table layout
+#osm-plans-list-columns{
+
+  .card{
+    .card-header{
+
+    }
+    .card-body{
+      .osm-plan-price{
+        text-align: center;
+        small{
+          font-size: 18px;
+          color: $gray-600;
+        }
+      }
+    }
+    .osm-signup-container{
+      padding: 0;
+        li{
+          list-style: none;
+          margin-top: 5px;
+        }
+    }
+  }
+}
