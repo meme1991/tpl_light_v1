@@ -159,9 +159,11 @@
   font-weight: 300;
 }
 
+// da modificare sul plugin
 .edocmanxtdlink{
   position: relative;
   display: inline-block;
+  text-align: left;
   width: 100%;
   padding: 5px 15px;
   background-color: $light;
@@ -179,7 +181,7 @@
   }
 }
 
-.edocman-document-title-link{
-  text-align: left;
-  @extend .edocmanxtdlink;
-}
+// .edocman-document-title-link{
+//   text-align: left;
+//   @extend .edocmanxtdlink;
+// }
