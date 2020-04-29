@@ -107,7 +107,7 @@ foreach ($items as $item)
 	if ($i % $numberColumns == 0)
 	{
 	?>
-		<div class="<?php echo $bootstrapHelper->getClassMapping('row-fluid clearfix'); ?> osm-pricing-table">
+		<div class="<?php echo $bootstrapHelper->getClassMapping('row-fluid clearfix'); ?> osm-pricing-table row justify-content-center">
 	<?php
 	}
 	?>

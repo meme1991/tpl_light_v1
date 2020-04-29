@@ -24,7 +24,9 @@ $categoryId = $this->category ? $this->category->id : 0;
 					$pageHeading = $this->params->get('page_heading') ? $this->params->get('page_heading') : JText::_('OSM_SUBSCRIPTION_PLANS');
 				}
 			?>
+			<div class="title-page">
 				<h1 class="osm-page-title"><?php echo $pageHeading; ?></h1>
+			</div>
 			<?php
 			}
 

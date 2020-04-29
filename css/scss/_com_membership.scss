@@ -1,10 +1,72 @@
 // main:template.scss
 
+// generico
+.osm-container{
+  form{
+    h2{
+      background-color: $light;
+      color: $dark;
+      padding: 5px 10px;
+      font-size: 25px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+  }
+  h2{
+    &.eb-heading, &.osm-heading{
+      background-color: $light;
+      color: $dark;
+      padding: 5px 10px;
+      font-size: 25px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+  }
+  h3{
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+
+
+  .nav-tabs{
+    li{
+      @extend .nav-item;
+      a{
+        @extend .nav-link;
+        &.active{
+          color: $primary;
+        }
+      }
+    }
+  }
+  .tab-content{
+    padding: 20px 15px;
+  }
+
+  table{
+    thead{
+      th{
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .osm-taskbar, form{
+    ul{
+      list-style: none;
+      padding-left: 15px;
+    }
+  }
+}
+
 // plans table layout
 #osm-plans-list-columns{
 
   .card{
     .card-header{
+      text-align: center;
 
     }
     .card-body{
@@ -25,3 +87,50 @@
     }
   }
 }
+
+// register view
+#osm-singup-page{
+  h2{
+    &.eb-heading, &.osm-heading{
+      background-color: $primary;
+      color: $white;
+      padding: 5px 10px;
+      font-size: 25px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+  }
+  h3{
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+// register complete
+#osm-subscription-complete{
+  p, span, strong{
+    font-size: 16px !important;
+  }
+  table{
+    border: 0;
+    tr{
+      td{
+        border: 0;
+        border-bottom: 1px $light solid;
+        background-color: $white;
+      }
+    }
+  }
+}
+
+// // subscription history
+// #osm-subscription-history{
+//   table{
+//     thead{
+//       th{
+//         text-transform: uppercase;
+//       }
+//     }
+//   }
+// }
