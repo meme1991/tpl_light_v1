@@ -30,27 +30,12 @@
 	    <div class="header-top">
 	      <div class="container">
 	        <div class="row">
-						<?php //if ($this->countModules('htop-left')) : ?>
-							<!-- <nav class="col-2 col-lg-7 htop-left d-flex justify-content-start top-nav navbar-expand-lg">
-								<button class="navbar-toggler" type="button" data-toggle="offcanvas-collapse">
-									<i class="fal fa-bars"></i>
-							  </button>
-								<div class="navbar-collapse offcanvas-collapse" id="top-nav">
-		              <jdoc:include type="modules" name="htop-left" />
-								</div>
-							</nav> -->
-							<!-- <nav class="col htop-left d-flex justify-content-start">
-	              <jdoc:include type="modules" name="htop-left" />
-							</nav> -->
-						<?php //endif; ?>
-						<?php //if ($this->countModules('htop')) : ?>
 						<div class="col htop d-flex justify-content-end">
 							<jdoc:include type="modules" name="htop" />
 						</div>
-						<?php //endif; ?>
 	        </div>
 	      </div>
-	    </div><!-- end .header-top -->
+	    </div>
 			<?php endif; ?>
 
 			<?php if ($this->countModules('navbar')) : ?>
@@ -113,13 +98,13 @@
 	  <!-- posizione di supporto - after component -->
 
 	  <footer class="footer">
-	    <div class="container footer-wrapper">
-	      <?php if ($this->countModules('footer-bottom')) : ?>
-	      <div class="row footer-bottom">
-	        <jdoc:include type="modules" name="footer-bottom" style="footer" />
-	      </div>
-	      <?php endif; ?>
-	    </div>
+			<?php if ($this->countModules('footer-bottom')) : ?>
+		    <div class="container footer-wrapper">
+		      <div class="row footer-bottom">
+		        <jdoc:include type="modules" name="footer-bottom" style="footer" />
+		      </div>
+		    </div>
+			<?php endif; ?>
 			<div class="footer-links">
 				<div class="container">
 					<div class="row">
