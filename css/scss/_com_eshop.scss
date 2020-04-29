@@ -551,8 +551,10 @@
     }
     .input-group-prepend{
       span{
-        background-color: $primary;
-        color: $white;
+        background-color: $white;
+        color: $dark;
+        border: 1px rgb(206, 212, 218) solid;
+        border-right: 0;
       }
     }
     .input-group-append{
