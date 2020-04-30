@@ -39,6 +39,7 @@ else
 	$showDownloadForm = false;
 }
 ?>
+
 <table class="table-condensed table-document" id="table-document">
 	<?php
 	if($config->show_tablelayoutheader){

@@ -58,7 +58,7 @@
   // disabled com_osmembership styles
   unset($doc->_styleSheets[JURI::root(true).'/media/com_osmembership/assets/css/style.min.css']);
 
-  // unset($doc->_styleSheets[JURI::root(true).'/components/com_edocman/assets/css/style.css']);
+  unset($doc->_styleSheets[JURI::root(true).'/components/com_edocman/assets/css/style.css']);
   // unset($doc->_styleSheets[JURI::root(true).'/components/com_edocman/assets/css/font.css']);
 
   $doc->addScript($tpath.'/js/bootstrapv4/popper.min.js?v=1.0.0', 'text/javascript', true, false);
