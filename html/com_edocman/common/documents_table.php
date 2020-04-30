@@ -367,7 +367,7 @@ else
 				{
 					?>
 					<div class="downloadinformation">
-						<i class="edicon edicon-download2"></i>&nbsp;<?php echo $item->downloads?> <?php echo JText::_('EDOCMAN_DOWNLOADS');?>
+						<i class="far fa-download"></i>&nbsp;<?php echo $item->downloads?> <?php echo JText::_('EDOCMAN_DOWNLOADS');?>
 					</div>
 					<?php
 				}
@@ -376,7 +376,7 @@ else
 					$tempArr[] = $item->data->size;
 					?>
 					<div class="sizeinformation">
-                        <i class="edicon edicon-database"></i>&nbsp;<?php echo $item->data->size; ?>
+                        <i class="far fa-database"></i>&nbsp;<?php echo $item->data->size; ?>
 					</div>
 					<?php
 				}
@@ -384,7 +384,7 @@ else
                 {
                     ?>
                     <div class="dateinformation">
-                        <i class="edicon edicon-calendar"></i>&nbsp;<?php echo JHtml::_('date', $item->created_time, $config->date_format, true); ?>
+                        <i class="fas fa-calendar-alt"></i>&nbsp;<?php echo JHtml::_('date', $item->created_time, $config->date_format, true); ?>
                     </div>
                     <?php
                 }
