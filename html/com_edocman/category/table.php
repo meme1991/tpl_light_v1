@@ -29,19 +29,19 @@ $user = JFactory::getUser();
 											<img class="img-thumbnail edocman-thumb-left" src="<?php echo $imgUrl; ?>" alt="<?php echo $this->category->title; ?>" />
 										</div>
 									<?php endif; ?>
-									<div class="">
+									<div class="w-100">
 										<h1 class="edocman-page-heading">
 											<?php if($imgUrl == '') : ?>
 												<i class="edicon edicon-folder-open"></i>
 											<?php endif; ?>
 											<?php echo $this->category->title; ?>
-											<?php if($this->config->enable_rss) : ?>
-												<span class="edocman-rss-icon"><a href="<?php echo JRoute::_('index.php?option=com_edocman&view=category&id='.$this->category->id.'&format=feed&type=rss'); ?>"><img src="<?php echo JUri::root().'/components/com_edocman/assets/images/rss.png' ?>" /></a></span>
-											<?php endif; ?>
-											<?php if ($user->authorise('core.create', 'com_edocman.category.'.$this->category->id)) : ?>
-												<span style="float: right;"><a href="<?php echo JRoute::_('index.php?option=com_edocman&view=document&layout=edit&catid=' . $this->category->id . '&Itemid=' . $this->Itemid); ?>" class="edocman_upload_link btn btn-primary"><i class="edicon edicon-upload"></i>&nbsp;<?php echo JText::_('EDOCMAN_UPLOAD'); ?></a></span>
-											<?php endif; ?>
 										</h1>
+										<?php if($this->config->enable_rss) : ?>
+											<span class="edocman-rss-icon"><a href="<?php echo JRoute::_('index.php?option=com_edocman&view=category&id='.$this->category->id.'&format=feed&type=rss'); ?>"><img src="<?php echo JUri::root().'/components/com_edocman/assets/images/rss.png' ?>" /></a></span>
+										<?php endif; ?>
+										<?php if ($user->authorise('core.create', 'com_edocman.category.'.$this->category->id)) : ?>
+											<span style="float: right;"><a href="<?php echo JRoute::_('index.php?option=com_edocman&view=document&layout=edit&catid=' . $this->category->id . '&Itemid=' . $this->Itemid); ?>" class="edocman_upload_link btn btn-primary"><i class="edicon edicon-upload"></i>&nbsp;<?php echo JText::_('EDOCMAN_UPLOAD'); ?></a></span>
+										<?php endif; ?>
 										<?php if($this->category->description != '') : ?>
 											<div class="edocman-description"><?php echo $this->category->description;?></div>
 										<?php endif; ?>

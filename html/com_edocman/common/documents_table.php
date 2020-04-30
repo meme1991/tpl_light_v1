@@ -279,7 +279,7 @@ else
                         {
                             ?>
                             <a href="<?php echo $viewUrl; ?>" class="documents_table_view edocman-modal" data-toggle="modal" <?php echo $audio_player;?> title="<?php echo JText::_('EDOCMAN_VIEW'); ?>">
-                                <i class="edicon edicon-eye"></i>
+                                <i class="fas fa-eye"></i>
                             </a>
                             <?php
                         }
@@ -287,7 +287,7 @@ else
                         {
                             ?>
                             <a href="<?php echo $viewUrl; ?>" class="documents_table_view" target="_blank" data-toggle="modal" <?php echo $audio_player;?> title="<?php echo JText::_('EDOCMAN_VIEW'); ?>">
-                                <i class="edicon edicon-eye"></i>
+                                <i class="fas fa-eye"></i>
                             </a>
                             <?php
                         }
@@ -297,7 +297,7 @@ else
                         $viewUrl = JRoute::_('index.php?option=com_edocman&task=document.viewdoc&id=' . $item->id . '&Itemid=' . $Itemid);
                         ?>
                             <a class="documents_table_view" href="<?php echo $viewUrl; ?>" target="_blank" title="<?php echo JText::_('EDOCMAN_VIEW'); ?>">
-                                <i class="edicon edicon-eye"></i>
+                                <i class="fas fa-eye"></i>
                             </a>
                         <?php
                     }
@@ -315,7 +315,7 @@ else
 					$url = JRoute::_('index.php?option=com_edocman&task=document.edit&id='.$item->id.'&Itemid='.$Itemid) ;
 					?>
 						<a class="documents_table_edit" href="<?php echo $url; ?>" title="<?php echo JText::_('EDOCMAN_EDIT'); ?>">
-							<i class="edocman-icon-pencil"></i>
+							<i class="far fa-edit"></i>
 						</a>
 					<?php
 				}
@@ -323,7 +323,7 @@ else
 				{
 				?>
 					<a class="documents_table_delete" href="javascript:deleteConfirm(<?php echo $item->id; ?>);" title="<?php echo JText::_('EDOCMAN_DELETE'); ?>">
-						<i class="edocman-icon-trash"></i>
+						<i class="far fa-trash-alt"></i>
 					</a>
 				<?php
 				}

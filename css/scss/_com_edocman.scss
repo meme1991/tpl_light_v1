@@ -91,6 +91,18 @@
       &.edocman-table-download-col{
         text-align: right;
       }
+      .documents_table_view, .documents_table_edit, .documents_table_delete{
+        padding-left: 5px;
+        padding-right: 5px;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+      .documents_table_delete{
+        &:hover{
+          color: $danger !important;
+        }
+      }
     }
   }
 
