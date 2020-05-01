@@ -36,8 +36,7 @@ JHtml::_('behavior.keepalive');
 	}
 </script>
 
-
-<section class="wrapper">
+<section class="wrapper edocman-upload-form">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
@@ -61,7 +60,7 @@ JHtml::_('behavior.keepalive');
 						<?php
 					}
 					?>
-					<table class="adminform" width="100%" style="border:0px !important;">
+					<table class="adminform" width="100%">
 						<tr>
 							<td valign="top" width="80%">
 								<table width="100%">
@@ -141,9 +140,9 @@ JHtml::_('behavior.keepalive');
 							</td>
 						</tr>
 						<tr>
-							<td  style="float: left;">
-								<input type="button" class="btn btn-secondary" onclick="cancelSubmit();" value="<?php echo JText::_('EDOCMAN_CANCEL'); ?>" />
+							<td class="taskbar">
 								<input type="button" class="btn btn-primary" onclick="submitDocument();" value="<?php echo JText::_('EDOCMAN_SUBMIT'); ?>"  />
+								<input type="button" class="btn btn-outline-primary" onclick="cancelSubmit();" value="<?php echo JText::_('EDOCMAN_CANCEL'); ?>" />
 							</td>
 						</tr>
 					</table>

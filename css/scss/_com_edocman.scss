@@ -156,7 +156,38 @@
   }
 }
 
-
+// upload form
+.edocman-upload-form{
+  table{
+    position: relative;
+    border: 0;
+    td{
+      border: 0;
+      border-bottom: 1px $light solid;
+      background-color: $white;
+      vertical-align: middle;
+      a{
+        color: $primary;
+      }
+      label{
+        font-size: 16px;
+        font-weight: 600;
+        &#jform_short_description-lbl, &#jform_description-lbl{
+          margin-bottom: 15px;
+        }
+      }
+      select{
+        width: 100% !important;
+      }
+      &.taskbar{
+        position: absolute;
+        top: -50px;
+        right: 0;
+        border: 0;
+      }
+    }
+  }
+}
 
 // modal
 #form-content{

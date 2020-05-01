@@ -54,6 +54,7 @@ JHtml::_('behavior.keepalive');
 		<?php
 	}
 	?>
+	sdfs
 	<table class="adminform" width="100%" style="border:0px !important;">
 		<tr>
 			<td valign="top" width="80%">
@@ -139,11 +140,11 @@ JHtml::_('behavior.keepalive');
 								<span style="padding-top: 3px; display: block;">
 							<?php
 							if ($this->item->original_filename) {
-								echo JText::_('EDOCMAN_FILE').": ";                                    
+								echo JText::_('EDOCMAN_FILE').": ";
 							?>
 								<a href="<?php echo 'index.php?option=com_edocman&task=document.download&id='.$this->item->id; ?>&Itemid=<?php echo EdocmanHelper::getItemid(); ?>"><?php echo $this->item->original_filename ; ?></a>
-							<?php        
-							}      
+							<?php
+							}
 							?>
 								</span>
 							<?php
@@ -278,14 +279,14 @@ JHtml::_('behavior.keepalive');
 				/*
 					if ($this->config->activate_multilingual_feature) {
 					?>
-					<tr>	
+					<tr>
 						<td><?php echo $this->form->getLabel('language'); ?></td>
 						<td><?php echo $this->form->getInput('language'); ?></td>
-					</tr>      	
-					<?php    
-					} 
+					</tr>
+					<?php
+					}
 				*/
-				?>	
+				?>
 				<tr>
 					<td colspan="2">
 						<?php echo $this->form->getLabel('short_description'); ?>
