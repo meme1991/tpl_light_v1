@@ -1,0 +1,92 @@
+// main:template.scss
+
+// generale
+.eb-container{
+  table{
+    &.table-condensed{
+      td{
+        padding: 8px 12px;
+      }
+    }
+    thead{
+      th{
+        text-transform: uppercase;
+      }
+    }
+    tbody{
+      td{
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .eb-event-link{
+    color: $primary;
+  }
+
+  .card{
+    .card-block{
+      padding: 15px;
+      .eb-event-date-time{
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .eb-event-price{
+        background-color: $primary;
+        color: $white;
+      }
+      .eb-taskbar{
+        ul{
+          li{
+            float: none !important;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+
+  #eb-event-info{
+    #eb-event-properties-heading{
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+  }
+
+  form{
+    .eb-heading{
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+    .form-group.form-row{
+      input[type="text"], select, textarea{
+        width: 100%!important;
+      }
+      input[readonly="readonly"]{
+        width: auto!important;
+      }
+    }
+  }
+}
+
+
+// list categories
+#eb-categories{
+  .eb-category-title{
+    text-transform: uppercase;
+    margin-bottom: 20px !important;
+  }
+}
+
+.table-slim{
+  border: 0;
+  th{
+    padding: 5px 12px;
+  }
+  td, th{
+    border: 0;
+    border-bottom: 1px $light solid;
+    background-color: $white;
+  }
+}
