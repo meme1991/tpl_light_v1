@@ -19,9 +19,9 @@
 		<div class="display-error">
 			<span class="display-1 d-block"><?php echo $this->error->getCode() ?>!</span>
 			<span class="message d-block"><?php echo $this->error->getMessage(); ?></span>
-			<span class="message d-block"><?php echo JText::_("TPL_AFFINITY_ERROR_1") ?></span>
+			<span class="message d-block"><?php echo JText::_("TPL_LIGHT_ERROR_1") ?></span>
 			<span class="message d-block">
-				<a href="<?php echo JURI::base() ?>" class="btn btn-outline-dark"><?php echo JText::_("TPL_AFFINITY_ERROR_BACKHOME") ?></a>
+				<a href="<?php echo JURI::base() ?>" class="btn btn-outline-dark"><?php echo JText::_("TPL_LIGHT_ERROR_BACKHOME") ?></a>
 			</span>
 		</div>
 	</div>

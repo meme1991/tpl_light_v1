@@ -14,12 +14,12 @@ defined('JPATH_BASE') or die;
 	<?php if ($displayData['params']->get('show_print_icon') OR $displayData['params']->get('show_email_icon')) : ?>
 		<ul class="list-inline d-none d-md-block mb-0">
 			<?php if ($displayData['params']->get('show_print_icon')) : ?>
-			<li class="list-inline-item" data-toggle="tooltip" data-placement="bottom" title="<?php echo JText::_('TPL_AFFINITY_PRINT') ?>">
+			<li class="list-inline-item" data-toggle="tooltip" data-placement="bottom" title="<?php echo JText::_('TPL_LIGHT_PRINT') ?>">
 				<?php echo JHtml::_('icon.print_popup', $displayData['item'], $displayData['params']); ?>
 			</li>
 			<?php endif; ?>
 			<?php if ($displayData['params']->get('show_email_icon')) : ?>
-			<li class="list-inline-item" data-toggle="tooltip" data-placement="bottom" title="<?php echo JText::_('TPL_AFFINITY_SEND') ?>">
+			<li class="list-inline-item" data-toggle="tooltip" data-placement="bottom" title="<?php echo JText::_('TPL_LIGHT_SEND') ?>">
 				<?php echo JHtml::_('icon.email', $displayData['item'], $displayData['params']); ?>
 			</li>
 			<?php endif; ?>
