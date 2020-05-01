@@ -150,6 +150,27 @@
       }
     }
 
+    .product-review{
+      img{
+        padding-top: 4px;
+      }
+      padding: 8px;
+    }
+  }
+
+  .nav-tabs{
+    li{
+      @extend .nav-item;
+      a{
+        @extend .nav-link;
+        &.active{
+          color: $primary;
+        }
+      }
+    }
+  }
+  .tab-content{
+    padding: 20px 15px;
   }
 
   .custom-attributes{

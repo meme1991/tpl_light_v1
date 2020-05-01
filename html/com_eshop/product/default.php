@@ -726,9 +726,9 @@ if (EshopHelper::getConfigValue('rich_snippets') == '1')
       <?php if (EshopHelper::getConfigValue('allow_reviews')) : ?>
       	<div>
           <div class="product-review">
-            <p>
+            <p class="mb-0">
               <img src="components/com_eshop/assets/images/stars-<?php echo round(EshopHelper::getProductRating($this->item->id)); ?>.png" />
-              <a onclick="activeReviewsTab();" style="cursor: pointer;"><?php echo count($this->productReviews).' '.JText::_('ESHOP_REVIEWS'); ?></a> | <a onclick="activeReviewsTab();" style="cursor: pointer;"><?php echo JText::_('ESHOP_WRITE_A_REVIEW'); ?></a>
+              <a onclick="activeReviewsTab();" style="cursor: pointer;"><?php echo count($this->productReviews).' '.JText::_('ESHOP_REVIEWS'); ?></a> | <a onclick="activeReviewsTab();" style="cursor: pointer;"><i class="far fa-edit"></i> <?php echo JText::_('ESHOP_WRITE_A_REVIEW'); ?></a>
             </p>
           </div>
         </div>
@@ -937,7 +937,7 @@ if (EshopHelper::getConfigValue('rich_snippets') == '1')
 			<?php
 		}
 		?>
-		<input type="button" class="<?php echo $btnClass; ?> btn-primary <?php echo $pullLeftClass; ?>" id="button-review" value="<?php echo JText::_('ESHOP_SUBMIT'); ?>" />
+		<input type="button" class="btn btn-primary" id="button-review" value="<?php echo JText::_('ESHOP_SUBMIT'); ?>" />
 		<input type="hidden" name="product_id" value="<?php echo $this->item->id; ?>" />
     	<?php
     	if (EshopHelper::getConfigValue('show_facebook_comment'))
