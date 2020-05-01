@@ -1,20 +1,22 @@
 // main:template.scss
 
 .alert{
+  position: relative;
   background-color: $white;
-  border-left-width: 10px;
+  overflow: hidden;
   @include boh-shadow_default;
   color: $dark;
   .icon{
-    float: left;
-    font-size: 40px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 60px;
   }
   h6,p{
-    padding-left: 70px;
+    padding-left: 50px;
   }
   h6{
     font-size: 25px;
-    margin-bottom: 20px;
   }
   p{
     margin: 0;
@@ -24,8 +26,10 @@
 //message
 .alert-message, .alert-notice{
   border-color: $primary;
-  border-left: 10px $primary solid;
   background-color: rgba($primary, .1);
+  .icon{
+    color: $primary;
+  }
   p{
     span{
       color: $primary;
@@ -35,12 +39,14 @@
 
 //info
 .alert-info{
-  border-color: $primary;
-  border-left: 10px $primary solid;
-  background-color: rgba($primary, .1);
+  border-color: $info;
+  background-color: rgba($info, .1);
+  .icon{
+    color: $info;
+  }
   p{
     span{
-      color: $primary;
+      color: $info;
     }
   }
 }
@@ -48,8 +54,10 @@
 //warning
 .alert-warning{
   border-color: $warning;
-  border-left: 10px $warning solid;
   background-color: rgba($warning, .1);
+  .icon{
+    color: $warning;
+  }
   p{
     span{
       color: $warning;
@@ -60,8 +68,10 @@
 //danger
 .alert-danger{
   border-color: $danger;
-  border-left: 10px $danger solid;
   background-color: rgba($danger, .1);
+  .icon{
+    color: $danger;
+  }
   p{
     span{
       color: $danger;
@@ -72,8 +82,10 @@
 //success
 .alert-success{
   border-color: $success;
-  border-left: 10px $success solid;
   background-color: rgba($success, .1);
+  .icon{
+    color: $success;
+  }
   p{
     span{
       color: $success;

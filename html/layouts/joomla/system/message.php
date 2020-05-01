@@ -25,6 +25,9 @@ $msgList = $displayData['msgList'];
 							<?php if($type == 'error') : ?>
 								<?php $type = 'danger'; ?>
 							<?php endif; ?>
+							<?php if($type == 'warning') : ?>
+								<?php $type = 'warning'; ?>
+							<?php endif; ?>
 							<?php if($type == 'notice') : ?>
 								<?php $type = 'info'; ?>
 							<?php endif; ?>
@@ -45,13 +48,13 @@ $msgList = $displayData['msgList'];
 									}
 								?>
 
-								<i class="icon far <?= $icon ?>"></i>
+								<i class="icon fas <?= $icon ?>"></i>
 
 								<?php if (!empty($msgs)) : ?>
 									<h6><?php echo JText::_($title); ?></h6>
 									<div>
 										<?php foreach ($msgs as $msg) : ?>
-											<p class="mb-3"><?php echo $msg; ?></p>
+											<p><?php echo $msg; ?></p>
 										<?php endforeach; ?>
 									</div>
 								<?php endif; ?>
