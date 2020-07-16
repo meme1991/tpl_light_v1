@@ -18,8 +18,8 @@ $catLink = JRoute::_(ContentHelperRoute::getCategoryRoute($displayData->catid));
   <meta itemprop="dateModified" content="<?php echo JHtml::_('date', $displayData->modified, JText::_('Y-m-d')) ?>">
 
   <?php if($params->get('show_publish_date')) : ?>
-    <small class="list-published" data-toggle="tooltip" data-placement="top" title="<?php echo JText::_('TPL_AFFINITY_PUBLISH_DATE') ?>" itemprop="datePublished" content="<?php echo JHtml::_('date', $displayData->publish_up, JText::_('Y-m-d')) ?>">
-      <span class="sr-only"><?php echo JText::_('TPL_AFFINITY_PUBLISH_DATE') ?></span>
+    <small class="list-published" data-toggle="tooltip" data-placement="top" title="<?php echo JText::_('TPL_LIGHT_PUBLISH_DATE') ?>" itemprop="datePublished" content="<?php echo JHtml::_('date', $displayData->publish_up, JText::_('Y-m-d')) ?>">
+      <span class="sr-only"><?php echo JText::_('TPL_LIGHT_PUBLISH_DATE') ?></span>
       <?php echo JHtml::_('date', $displayData->publish_up, JText::_('D, d M Y')) ?>
     </small>
   <?php else : ?>
@@ -28,8 +28,8 @@ $catLink = JRoute::_(ContentHelperRoute::getCategoryRoute($displayData->catid));
   <!-- date -->
 
   <?php if($params->get('show_category')) : ?>
-    <small class="list-category" data-toggle="tooltip" data-placement="top" title="<?php echo JText::_('TPL_AFFINITY_CATEGORY') ?>">
-      <span class="sr-only"><?php echo JText::_('TPL_AFFINITY_CATEGORY') ?></span>
+    <small class="list-category" data-toggle="tooltip" data-placement="top" title="<?php echo JText::_('TPL_LIGHT_CATEGORY') ?>">
+      <span class="sr-only"><?php echo JText::_('TPL_LIGHT_CATEGORY') ?></span>
       <?php if($params->get('link_category')) : ?>
       <a href="<?php echo $catLink ?>">
         <?php echo $displayData->category_title ?>
