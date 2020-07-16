@@ -15,7 +15,7 @@ if(is_array($displayData)){
   $title = $displayData['title'];
   $msg   = $displayData['msg'];
 }else{
-  $title = "TPL_AFFINITY_MESSAGE_HEADER_DANGER";
+  $title = "TPL_LIGHT_MESSAGE_HEADER_DANGER";
   $msg   = $displayData;
 }
 ?>
